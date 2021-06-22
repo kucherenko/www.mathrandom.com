@@ -53,7 +53,7 @@
     "prettier": "^2.2.1",
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-standard": "^22.0.0",
     "ts-jest": "^26.4.4",
     "vue-jest": "^3.0.4"
   }
