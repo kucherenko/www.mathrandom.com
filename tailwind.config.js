@@ -1,15 +1,45 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
-  purge: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}"
-  ],
+  purge: {
+    content: [
+      "./components/**/*.{vue,js}",
+      "./layouts/**/*.vue",
+      "./pages/**/*.vue",
+      "./plugins/**/*.{js,ts}",
+      "./nuxt.config.{js,ts}"
+    ],
+    safelist: [
+      'bg-hero-1',
+      'bg-hero-2',
+      'bg-hero-3',
+      'bg-hero-4',
+      'bg-hero-5',
+      'bg-hero-6',
+      'text-graphite-gray',
+      'text-deep-sea',
+      'text-lemon-sun',
+      'text-toxic-green',
+      'text-graphite',
+      'text-dark-gray',
+      'border-graphite-gray',
+      'border-deep-sea',
+      'border-lemon-sun',
+      'border-toxic-green',
+      'border-graphite',
+      'border-dark-gray',
+      'bg-graphite-gray',
+      'bg-deep-sea',
+      'bg-lemon-sun',
+      'bg-toxic-green',
+      'bg-graphite',
+      'bg-dark-gray',
+    ]
+  },
   theme: {
     typography: {
       default: {

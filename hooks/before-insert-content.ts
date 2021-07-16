@@ -1,7 +1,5 @@
 const client = require("@sendgrid/client");
 
-console.log(process.env)
-
 client.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (document: any) => {

@@ -61,6 +61,9 @@ export default class extends Vue {
     if (url.indexOf('tiktok') !== -1) {
       return ['fab', 'tiktok'];
     }
+    if (url.indexOf('vk.com') !== -1) {
+      return ['fab', 'vk'];
+    }
     return ['fas', 'external-link-alt'];
   }
 }
