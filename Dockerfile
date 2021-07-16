@@ -3,7 +3,6 @@ FROM node:14
 WORKDIR /usr/src/app
 
 COPY . ./
-RUN npm install yarn -g
 RUN yarn
 
 EXPOSE 3000
