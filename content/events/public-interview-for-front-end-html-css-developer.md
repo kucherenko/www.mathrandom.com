@@ -9,10 +9,6 @@ authors:
     title: Software Engineer, Middle Developer
     about: 1 year and 7 months of work experience; main areas of interest - html5, css3, scss, bootstrap. Have hands-on experience with Angular 2+ on the current project.
     image: https://dl.airtable.com/.attachmentThumbnails/1f540cda22164147be102b7995bcdb34/017c512e
-    links:
-      - https://dmtrkovalenko.dev
-      - https://twitter.com/dmtrKovalenko
-      - https://github.com/dmtrKovalenko
   - name: Viktoriia Mironova
     title: Interviewer, Lead software engineer
     about: 10+ years experience in frontend development, mentoring and interviewing, have PhD degree)

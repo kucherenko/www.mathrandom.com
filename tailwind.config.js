@@ -11,6 +11,18 @@ module.exports = {
     "./nuxt.config.{js,ts}"
   ],
   theme: {
+    typography: {
+      default: {
+        css: {
+          'code::before': {
+            content: '""',
+          },
+          'code::after': {
+            content: '""',
+          },
+        },
+      },
+    },
     extend: {
       colors: {
         "graphite-gray": "#333333",
@@ -18,7 +30,8 @@ module.exports = {
         "hot-red": "#FF3F06",
         "lemon-sun": "#FFE400",
         "toxic-green": "#06FFBB",
-        graphite: "#1a1a1a"
+        graphite: "#1a1a1a",
+        "dark-gray": "#1b1b1b"
       },
       backgroundImage: () => ({
         "hero-1": "url('/bg/bg-1.png')",
@@ -32,7 +45,8 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require("@tailwindcss/forms")
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography")
     // ...
   ]
 };

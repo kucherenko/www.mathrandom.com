@@ -3,7 +3,7 @@ title: "Parser combinators: parsing search query in 200 lines of code"
 theme: 5
 eventDate: 12-02-2020 18:00 GMT+3
 language: Russian
-link: https://www.youtube.com/watch?v=9gLHIYSzTFU
+link: https://www.youtube.com/watch?v=gzI_Gty7uWY
 authors:
   - name: Yuriy Bogomolov
     title: Lead Software Engineer

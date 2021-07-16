@@ -5,6 +5,7 @@
       <Slide v-for="(item, index) in futureEvents" :key="index" :event="item" />
     </VueSlickCarousel>
     <Slide v-if="futureEvents && futureEvents.length === 1" :event="futureEvents[0]" />
+    <Subscribe/>
     <div class="my-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
       <Card
         v-for="(item, index) in pastEvents"
@@ -41,12 +42,6 @@ const VueSlickCarousel = require("vue-slick-carousel");
 export default class extends Vue {
   modal = true;
 
-  head(){
-    return {
-      title: 'Math.random() Community of engineers'
-    }
-  }
-
   async asyncData(context: any) {
     const pastEvents = await context
       .$content("events")
@@ -58,7 +53,7 @@ export default class extends Vue {
       .catch((err: any) => {
         console.log(err);
       });
-
+    console.log(pastEvents);
     const futureEvents = await context
       .$content("events")
       .sortBy("edate", "asc")

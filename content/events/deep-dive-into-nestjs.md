@@ -19,6 +19,8 @@ authors:
         href: https://speakerdeck.com/galkin/
 ---
 
+## Nest.js 
+
 NestJS is a framework with excellent documentation and a mature ecosystem. But during this talk, we will not retell its docs. We will go deeper.
 
 The plan is:
@@ -27,4 +29,5 @@ The plan is:
 - request context and lifecycle,
 - declarative code with decorators,
 - testing and documentation.
-  This talk will create a better understanding of Nest.js architecture.
+  
+This talk will create a better understanding of Nest.js architecture.

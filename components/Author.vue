@@ -15,7 +15,6 @@
       :src="author.image"
       :alt="author.name + ' ' + author.title"
     />
-    <!--    xl:w-16 xl:h-16 md:w-1 md:h-32 xs:w-24 xs:h-24-->
     <div>
       <p class="text-2xl font-bold" :class="'text-' + color">
         {{ author.name }}

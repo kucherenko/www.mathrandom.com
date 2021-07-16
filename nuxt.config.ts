@@ -3,7 +3,7 @@ import contentFileBeforeInsertHook from "./hooks/before-insert-content";
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "www.mathrandom.com",
+    title: "Math.random() Community of engineers",
     htmlAttrs: {
       lang: "en"
     },
@@ -19,7 +19,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["~/plugins/theme.ts"],
+  plugins: [
+    "~/plugins/theme.ts",
+    { src: "~/plugins/add-to-calendar.ts", ssr: false }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -31,7 +34,8 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     "@nuxtjs/stylelint-module",
     // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss"
+    "@nuxtjs/tailwindcss",
+    '@nuxtjs/fontawesome'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -40,8 +44,15 @@ export default {
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
-    '@nuxtjs/recaptcha',
+    "@nuxtjs/recaptcha"
   ],
+
+  fontawesome: {
+    icons: {
+      solid: true,
+      brands: true
+    }
+  },
 
   recaptcha: {
     version: 3,
@@ -53,16 +64,22 @@ export default {
   axios: {},
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    liveEdit: false
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extend (config: any) {
+      config.resolve.alias['vue'] = 'vue/dist/vue.common'
+    },
+  },
 
   hooks: {
     "content:file:beforeInsert": contentFileBeforeInsertHook
   },
 
   serverMiddleware: [
-    { path: '/api/v1', handler: '~/server-middleware/' },
+    "~/server-middleware/"
   ]
 };

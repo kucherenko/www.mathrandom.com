@@ -5,26 +5,7 @@
   >
     <main class="mt-5 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="w-full">
-        <img
-          v-if="event.theme === 1 || event.theme === 5"
-          src="@/assets/img/logos/logo_green.svg"
-          class="pt-5"
-        />
-        <img
-          v-if="event.theme === 2 || event.theme === 4"
-          src="@/assets/img/logos/logo_lemon.svg"
-          class="pt-5"
-        />
-        <img
-          v-if="event.theme === 3"
-          src="@/assets/img/logos/logo_red.svg"
-          class="pt-5"
-        />
-        <img
-          v-if="event.theme === 6"
-          src="@/assets/img/logos/logo_blue.svg"
-          class="pt-5"
-        />
+        <Logo :theme="event.theme" />
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
         <div class="md:col-span-2 test">

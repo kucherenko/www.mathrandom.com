@@ -2,7 +2,6 @@ const client = require("@sendgrid/client");
 client.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async (document: any) => {
-
   const request = {
     method: "GET",
     url: "/v3/marketing/lists"

@@ -13,6 +13,8 @@ authors:
     title: Interviewer, Software Engineer
     about: Software Engineer at viax.io, Kyiv Vue.js meetup organizer
     image: https://dl.airtable.com/.attachmentThumbnails/43a1be08548a35c65eacb29096ee8afb/de8e51ad
+    links:
+      - https://t.me/vuejs_kyiv
 ---
 
 We invite you to a webinar in the format of a public interview for Vue developer.

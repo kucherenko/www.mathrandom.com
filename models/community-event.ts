@@ -7,7 +7,8 @@ export interface CommunityEvent {
   // eslint-disable-next-line camelcase
   eventDate: string
   edate?: number
-  language: 'Russian' | 'English' | 'Ukrainian'
+  listId?: string
+  language: string
   link: string
   authors: Array<Author>
 }

@@ -10,7 +10,8 @@ authors:
     about: Full stack developer with 19+ years of experience, currently he is head of engineering at Product Hunt. Enjoys blogging and solving problems.
     image: https://dl.airtable.com/.attachmentThumbnails/de02aa65eec601842cb38d9a20964a48/fc80452b
     links:
-      - href: https://blog.rstankov.com
+      - https://blog.rstankov.com
+      - https://www.producthunt.com/
 ---
 
 Interview about Product Hunt Architecture using React, GraphQL, RubyOnRails, Next.js, React.Native and others.
