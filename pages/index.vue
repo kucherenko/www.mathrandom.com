@@ -53,7 +53,6 @@ export default class extends Vue {
       .catch((err: any) => {
         console.log(err);
       });
-    console.log(pastEvents);
     const futureEvents = await context
       .$content("events")
       .sortBy("edate", "asc")

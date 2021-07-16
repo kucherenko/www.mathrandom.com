@@ -25,8 +25,9 @@ authors:
     image: https://dl.airtable.com/.attachmentThumbnails/cc3372c07562ca4ade6345e8e0dc8890/71e703bb
     links:
       - https://github.com/kucherenko
-      - https://startupemulator.com/
       - https://t.me/mathrandomcommunity
+      - https://www.npmjs.com/package/jscpd
+      - https://www.startupemulator.com/
 ---
 
 We invite you to a webinar in the format of a public interview for Vue developer.

@@ -118,7 +118,7 @@
 
           </div>
         </div>
-        <div class="object-center text-center grid gap-4" :class="{'xl:grid-cols-2': event.authors.length > 2}">
+        <div class="object-center text-center grid gap-4">
           <AuthorCard
             v-for="(author, index) in event.authors"
             :key="index"
