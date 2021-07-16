@@ -3,7 +3,7 @@ import axios from "axios";
 const client = require("@sendgrid/client");
 const bodyParser = require("body-parser");
 const app = require("express")();
-console.log('!!!' + process.env.SENDGRID_API_KEY +'???')
+console.log(process.env)
 client.setApiKey(process.env.SENDGRID_API_KEY);
 
 module.exports = { path: "/api/v1", handler: app };
