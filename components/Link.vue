@@ -18,7 +18,7 @@ export default class extends Vue {
   @Prop() source: Link | string;
   @Prop() color: string;
 
-  getIcon(url) {
+  getIcon(url: string) {
     if (url.indexOf('twitter') !== -1) {
       return ['fab', 'twitter'];
     }
@@ -54,6 +54,12 @@ export default class extends Vue {
     }
     if (url.indexOf('npm') !== -1) {
       return ['fab', 'npm'];
+    }
+    if (url.indexOf('instagram') !== -1) {
+      return ['fab', 'instagram'];
+    }
+    if (url.indexOf('tiktok') !== -1) {
+      return ['fab', 'tiktok'];
     }
     return ['fas', 'external-link-alt'];
   }

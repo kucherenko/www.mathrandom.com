@@ -84,7 +84,7 @@
 
           </div>
           <div class="my-5 text-white">
-            <div class="my-3 sm:mt-0 sm:ml-3" v-if="event.edate > (new Date()).getTime() + 60 * 60 * 1000">
+            <div class="my-3 sm:mt-0" v-if="event.edate > (new Date()).getTime() + 60 * 60 * 1000">
               <a
                 href="#"
                 @click.prevent="showRegister = true"
@@ -93,7 +93,6 @@
                 flex
                 items-center
                 justify-center
-                px-8
                 py-3
                 border border-transparent
                 text-base
