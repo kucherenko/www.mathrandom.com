@@ -37,9 +37,7 @@ export default {
     "@nuxtjs/tailwindcss",
     '@nuxtjs/fontawesome'
   ],
-  tailwindcss: {
 
-  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
@@ -62,8 +60,13 @@ export default {
     siteKey: process.env.RECAPTCHA_SITE_KEY
   },
 
+  env: {
+    baseURL: process.env.BASE_URL,
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    url: process.env.BASE_URL || "/",
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
