@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { Author } from '../models/author'
+import { Author } from '../../models/author'
 
 @Component({})
 export default class extends Vue {

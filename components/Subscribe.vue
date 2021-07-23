@@ -14,23 +14,6 @@
     "
   >
     <div
-      class="flex-none w-full text-center xl:w-auto xl:flex-auto xl:text-left"
-    >
-      <h1
-        class="
-          text-3xl
-          font-semibold
-          leading-9
-          text-white
-          font-display
-          sm:text-4xl sm:leading-10
-        "
-      >
-        Math.random() engineering community,
-        <span class="text-white sm:block">we love technologies. </span>
-      </h1>
-    </div>
-    <div
       class="
         flex flex-col
         w-full
