@@ -67,7 +67,6 @@
           <div class="mt-3 sm:mt-0 sm:ml-3">
             <a
               href="#"
-              @click.prevent="showRegister = true"
               class="
                 w-full
                 flex
@@ -85,10 +84,15 @@
                 md:py-4 md:text-lg md:px-10
               "
               :class="'bg-' + $getThemeColor(event.theme)"
+              @click.prevent="showRegister = true"
             >
               Register
             </a>
-            <Register :show-modal="showRegister" :event="event" v-on:hide="showRegister = false" />
+            <Register
+              :show-modal="showRegister"
+              :event="event"
+              @hide="showRegister = false"
+            />
           </div>
         </div>
         <div>
@@ -159,30 +163,30 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "nuxt-property-decorator";
-import { CommunityEvent } from "~/models/community-event";
-import Author from "~/components/Author.vue";
-import Register from "~/components/Register.vue";
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { CommunityEvent } from '~/models/community-event'
+import Author from '~/components/Author.vue'
+import Register from '~/components/Register.vue'
 
 @Component({
-  components: { Register, Author }
+  components: { Register, Author },
 })
 export default class extends Vue {
-  @Prop() event: CommunityEvent;
+  @Prop() event: CommunityEvent
 
-  showRegister = false;
+  showRegister = false
 
   getSize(authors: Array<Author>) {
     if (authors.length === 1) {
-      return "l";
+      return 'l'
     }
     if (authors.length === 2) {
-      return "m";
+      return 'm'
     }
     if (authors.length === 3) {
-      return "s";
+      return 's'
     }
-    return "xs";
+    return 'xs'
   }
 }
 </script>

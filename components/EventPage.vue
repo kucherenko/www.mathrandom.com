@@ -23,7 +23,10 @@
           >
             <span class="block xl:inline">{{ event.title }}</span>
           </h1>
-          <div class="flex gap-4 whitespace-nowrap font-bold" :class="'text-' + $getThemeColor(event.theme)">
+          <div
+            class="flex gap-4 whitespace-nowrap font-bold"
+            :class="'text-' + $getThemeColor(event.theme)"
+          >
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,41 +84,54 @@
               </svg>
               {{ event.language }}
             </div>
-
           </div>
           <div class="my-5 text-white">
-            <div class="my-3 sm:mt-0" v-if="event.edate > (new Date()).getTime() + 60 * 60 * 1000">
+            <div
+              v-if="event.edate > new Date().getTime() + 60 * 60 * 1000"
+              class="my-3 sm:mt-0"
+            >
               <a
                 href="#"
-                @click.prevent="showRegister = true"
                 class="
-                w-full
-                flex
-                items-center
-                justify-center
-                py-3
-                border border-transparent
-                text-base
-                shadow
-                font-bold
-                uppercase
-                rounded-md
-                text-graphite-gray
-                md:py-4 md:text-lg md:px-10
-              "
+                  w-full
+                  flex
+                  items-center
+                  justify-center
+                  py-3
+                  border border-transparent
+                  text-base
+                  shadow
+                  font-bold
+                  uppercase
+                  rounded-md
+                  text-graphite-gray
+                  md:py-4 md:text-lg md:px-10
+                "
                 :class="'bg-' + $getThemeColor(event.theme)"
+                @click.prevent="showRegister = true"
               >
                 Register
               </a>
-              <Register :show-modal="showRegister" :event="event" v-on:hide="showRegister = false" />
+              <Register
+                :show-modal="showRegister"
+                :event="event"
+                @hide="showRegister = false"
+              />
             </div>
             <div class="mx-auto p-3 bg-dark-gray rounded-md">
               <youtube width="100%" :video-id="getYoutubeId()"></youtube>
             </div>
             <NuxtContent
-              class="p-3 prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
-              :document="event" />
-
+              class="
+                p-3
+                prose prose-sm
+                sm:prose
+                lg:prose-lg
+                xl:prose-2xl
+                mx-auto
+              "
+              :document="event"
+            />
           </div>
         </div>
         <div class="object-center text-center grid gap-4">
@@ -132,27 +148,28 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "nuxt-property-decorator";
-import { CommunityEvent } from "~/models/community-event";
-import AuthorCard from "~/components/AuthorCard.vue";
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { CommunityEvent } from '~/models/community-event'
+import AuthorCard from '~/components/AuthorCard.vue'
 
-const { Youtube } = require("vue-youtube");
+const { Youtube } = require('vue-youtube')
 
 @Component({
-  components: { AuthorCard, Youtube }
+  components: { AuthorCard, Youtube },
 })
 export default class extends Vue {
-  @Prop() event: CommunityEvent;
+  @Prop() event: CommunityEvent
 
-  showRegister = false;
+  showRegister = false
 
   getYoutubeId() {
-    const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = this.event.link.match(regExp);
-    if (match && match[2].length == 11) {
-      return match[2];
+    const regExp =
+      /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/
+    const match = this.event.link.match(regExp)
+    if (match && match[2].length === 11) {
+      return match[2]
     } else {
-      //error
+      // error
     }
   }
 }

@@ -4,7 +4,10 @@
     :class="['bg-hero-' + event.theme, 'border-' + $getThemeColor(event.theme)]"
   >
     <div class="grid grid-cols-1 gap-2">
-      <div class="w-full flex object-right font-bold" :class="'text-' + $getThemeColor(event.theme)">
+      <div
+        class="w-full flex object-right font-bold"
+        :class="'text-' + $getThemeColor(event.theme)"
+      >
         <a class="flex items-center" :href="event.link">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +21,12 @@
           </svg>
           Video
         </a>
-
       </div>
       <div>
         <h2 class="text-2xl text-white tracking-tight font-extrabold">
-          <a :href="'events/' + event.slug"><span class="block xl:inline">{{ event.title }}</span></a>
+          <a :href="'events/' + event.slug"
+            ><span class="block xl:inline">{{ event.title }}</span></a
+          >
         </h2>
       </div>
       <div class="mt-3">
@@ -37,7 +41,10 @@
             :alt="author.name + ' ' + author.title"
           />
           <div>
-            <p class="text-lg font-bold" :class="'text-' + $getThemeColor(event.theme)">
+            <p
+              class="text-lg font-bold"
+              :class="'text-' + $getThemeColor(event.theme)"
+            >
               {{ author.name }}
             </p>
             <p class="text-white text-sm">{{ author.title }}</p>
@@ -63,22 +70,42 @@
         {{ event.language }}
       </div>
       <div :class="'text-' + $getThemeColor(event.theme)">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 inline"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
         </svg>
 
-        {{ (new Date(event.eventDate)).toLocaleString() }}
+        {{ new Date(event.eventDate).toLocaleString() }}
       </div>
       <div class="mt-3">
-        <a :href="'events/' + event.slug"
-           class="underline hover:no-underline"
-           :class="'text-' + $getThemeColor(event.theme)">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline" fill="none" viewBox="0 0 24 24"
-               stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+        <a
+          :href="'events/' + event.slug"
+          class="underline hover:no-underline"
+          :class="'text-' + $getThemeColor(event.theme)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 inline"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+            />
           </svg>
           More info...
         </a>
@@ -88,12 +115,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "nuxt-property-decorator";
-import { CommunityEvent } from "~/models/community-event";
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { CommunityEvent } from '~/models/community-event'
 
 @Component({})
 export default class extends Vue {
-  @Prop() event: CommunityEvent;
+  @Prop() event: CommunityEvent
 }
 </script>
 

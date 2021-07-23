@@ -1,6 +1,5 @@
 <template>
   <div class="flex items-center mb-3">
-
     <img
       class="rounded-full mr-4 object-cover"
       :class="{

@@ -7,35 +7,35 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import { CommunityEvent } from "~/models/community-event";
-import EventPage from "~/components/EventPage.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import { CommunityEvent } from '~/models/community-event'
+import EventPage from '~/components/EventPage.vue'
 
 @Component({
-  components: { EventPage }
+  components: { EventPage },
 })
 export default class extends Vue {
-  event: CommunityEvent;
+  event: CommunityEvent
 
   head() {
     return {
-      title: this.event.title + " - Math.random() Community of engineers"
-    };
+      title: this.event.title + ' - Math.random() Community of engineers',
+    }
   }
 
   async asyncData({ route, $content }: any) {
-    const [event] = await $content("events")
+    const [event] = await $content('events')
       .where({
-        slug: route.params.slug
+        slug: route.params.slug,
       })
       .fetch()
       .catch((err: any) => {
-        console.log(err);
-      });
+        // eslint-disable-next-line no-console
+        console.log(err)
+      })
     return {
-      event
-    };
+      event,
+    }
   }
-
 }
 </script>
