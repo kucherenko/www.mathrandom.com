@@ -64,8 +64,11 @@
           <a
             class="
               text-black
-              hover:text-yellow-900
-              active:text-yellow-900
+              animate
+              transition
+              duration-75
+              hover:text-yellow-800
+              active:text-yellow-800
             "
             :href="'/events/' + event.slug"
           >
