@@ -1,6 +1,5 @@
 ---
 title: Дизайн Events-First микросервисов
-theme: 5
 eventDate: 04-15-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=mT8nOcRVCEU

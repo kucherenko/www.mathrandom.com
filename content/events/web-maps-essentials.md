@@ -1,6 +1,5 @@
 ---
 title: Web Maps Essentials
-theme: 6
 eventDate: 01-21-2021 18:00 GMT+3
 language: Ukrainian
 link: https://www.youtube.com/watch?v=tqGkPQAE1Ho

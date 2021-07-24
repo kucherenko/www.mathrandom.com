@@ -1,6 +1,5 @@
 ---
 title: StartupEmulator Demo EDU4U education platform
-theme: 4
 eventDate: 12-23-2020 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=yNo2n0pp8uM

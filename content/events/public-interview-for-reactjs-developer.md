@@ -1,6 +1,5 @@
 ---
 title: Public interview for ReactJS Developer
-theme: 6
 eventDate: 03-18-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=Nj-cId2mgAA

@@ -1,6 +1,5 @@
 ---
 title: Public interview for Test Automation Engineer with JavaScript
-theme: 2
 eventDate: 05-27-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=fSO6hEe5fZU

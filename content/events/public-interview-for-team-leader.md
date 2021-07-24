@@ -1,6 +1,5 @@
 ---
 title: Public interview for Team Leader
-theme: 1
 eventDate: 02-18-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=pCBiHUi0Hjc

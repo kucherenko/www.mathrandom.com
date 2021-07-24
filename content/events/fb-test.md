@@ -1,6 +1,5 @@
 ---
 title: "Parser combinators: parsing search query in 200 lines of code"
-theme: 5
 eventDate: 12-02-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=9gLHIYSzTFU

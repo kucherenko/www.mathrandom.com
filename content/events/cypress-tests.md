@@ -1,6 +1,5 @@
 ---
 title: Переосмысливаем подход к компонентным тестам
-theme: 3
 eventDate: 03-25-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=KHMCzIKb8DY

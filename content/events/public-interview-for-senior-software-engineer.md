@@ -1,6 +1,5 @@
 ---
 title: Public interview for Senior JavaScript Developer
-theme: 2
 eventDate: 10-22-2020 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=9gLHIYSzTFU

@@ -1,6 +1,5 @@
 ---
 title: Public Interview for Advanced Engineer
-theme: 2
 eventDate: 04-08-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=9gLHIYSzTFU

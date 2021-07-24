@@ -1,6 +1,5 @@
 ---
 title: Public Interview for Vue developer
-theme: 5
 eventDate: 04-29-2021 18:00 GMT+3
 language: Russian, Ukrainian
 link: https://www.youtube.com/watch?v=9gLHIYSzTFU

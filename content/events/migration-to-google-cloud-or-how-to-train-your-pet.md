@@ -1,6 +1,5 @@
 ---
 title: Migration to Google Cloud or How to Train your Pet
-theme: 6
 eventDate: 02-11-2021 18:00 GMT+3
 language: Ukrainian
 link: https://www.youtube.com/watch?v=NCvhY5qEf_s

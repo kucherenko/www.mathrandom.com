@@ -1,6 +1,5 @@
 ---
 title: Product Hunt Architecture
-theme: 3
 eventDate: 07-07-2021 19:00 GMT+3
 language: English
 link: https://www.youtube.com/watch?v=9rRvR74rbM4

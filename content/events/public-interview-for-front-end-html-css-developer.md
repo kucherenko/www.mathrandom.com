@@ -1,6 +1,5 @@
 ---
 title: Public interview for Front-end/HTML/CSS developer
-theme: 3
 eventDate: 01-14-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=cebz6w8o-fU
