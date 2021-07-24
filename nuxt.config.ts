@@ -1,6 +1,11 @@
 import contentFileBeforeInsertHook from "./hooks/before-insert-content";
 
 export default {
+  // static rendering for fast SSR
+  // NOTE: this might break recaptcha
+  // https://nuxtjs.org/docs/2.x/features/deployment-targets
+  target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Math.random() Community of engineers",
