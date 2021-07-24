@@ -47,7 +47,10 @@ export default {
     "@nuxtjs/stylelint-module",
     // https://go.nuxtjs.dev/tailwindcss
     "@nuxtjs/tailwindcss",
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
+
+    // https://github.com/Developmint/nuxt-purgecss
+    'nuxt-purgecss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -56,7 +59,10 @@ export default {
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
-    "@nuxtjs/recaptcha"
+    "@nuxtjs/recaptcha",
+
+    // https://github.com/nuxt-community/critters-module
+    '@nuxtjs/critters',
   ],
 
   fontawesome: {
