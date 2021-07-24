@@ -33,7 +33,7 @@
       <div>
         <div class="inline-block mr-4 text-gray-400">
           <IconCalendar />
-          {{ eventDate }}
+          {{ eventDateFormatted }}
         </div>
 
         <div class="inline-block text-gray-400">
@@ -52,6 +52,7 @@ import IconCalendar from './Icon/Calendar.vue'
 import IconLanguage from './Icon/Language.vue'
 import IconPin from './Icon/Pin.vue'
 import { ICommunityEvent } from '~/models/community-event'
+import { displayDate } from '~/src/shared/dates'
 
 @Component({
   components: { IconCalendar, IconLanguage, IconPin, AuthorImage },
@@ -59,20 +60,9 @@ import { ICommunityEvent } from '~/models/community-event'
 export default class Card extends Vue {
   @Prop() event: ICommunityEvent
 
-  get eventDate() {
-    try {
-      const dt = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' })
-      const formatted = dt.format(this.event.edate)
-      return formatted
-    } catch {
-      return new Date(this.event.eventDate).toLocaleString()
-    }
+  get eventDateFormatted() {
+    if (!this.event.edate) return
+    return displayDate(this.event.edate, false)
   }
 }
 </script>
-
-<style>
-.card {
-  min-height: 270px;
-}
-</style>

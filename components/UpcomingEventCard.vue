@@ -23,7 +23,7 @@
       <div class="md:col-span-3">
         <div class="leading-5 align-middle text-gray-500">
           <IconCalendar classes="h-5 w-5 mr-2 inline float-left" />
-          {{ eventDate }}
+          {{ eventDateString }}
         </div>
 
         <h2
@@ -104,6 +104,7 @@ import Register from '~/components/Register.vue'
 import IconPin from '~/components/Icon/Pin.vue'
 import IconLanguage from '~/components/Icon/Language.vue'
 import IconCalendar from '~/components/Icon/Calendar.vue'
+import { displayDate } from '~/src/shared/dates'
 
 @Component({
   components: { Register, AuthorImage, IconPin, IconLanguage, IconCalendar },
@@ -111,17 +112,9 @@ import IconCalendar from '~/components/Icon/Calendar.vue'
 export default class extends Vue {
   @Prop() event: ICommunityEvent
 
-  get eventDate() {
-    try {
-      const dt = new Intl.DateTimeFormat('en-US', {
-        dateStyle: 'medium',
-        timeStyle: 'long',
-      })
-      const formatted = dt.format(this.event.edate)
-      return formatted
-    } catch {
-      return new Date(this.event.eventDate).toLocaleString()
-    }
+  get eventDateString() {
+    if (!this.event.edate) return
+    return displayDate(this.event.edate, true)
   }
 
   getSize(authors: IAuthor[]) {

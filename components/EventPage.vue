@@ -7,7 +7,7 @@
       <div class="text-gray-500 flex gap-3">
         <div class="inline-block">
           <IconCalendar />
-          {{ new Date(event.eventDate).toLocaleString() }}
+          {{ eventDateFormatted }}
         </div>
       </div>
 
@@ -54,17 +54,14 @@
           <!-- TODO: implicitly set proper height -->
           <div
             v-if="getYoutubeId()"
-            class="mx-auto overflow-hidden rounded-md"
+            class="mx-auto overflow-hidden rounded-md bg-black"
             style="height: 360px"
           >
             <youtube width="100%" :video-id="getYoutubeId()"></youtube>
           </div>
 
           <!-- REGISTER -->
-          <div
-            v-if="event.edate > new Date().getTime() + 60 * 60 * 1000"
-            class="mt-4 p-4 bg-gray-100 rounded-md"
-          >
+          <div v-if="isUpcomingEvent" class="mt-4 p-4 bg-gray-100 rounded-md">
             <Register :event="event" />
           </div>
         </div>
@@ -99,6 +96,7 @@ import IconLanguage from '~/components/Icon/Language.vue'
 import IconPin from '~/components/Icon/Pin.vue'
 import Register from '~/components/Register.vue'
 import { ICommunityEvent } from '~/models/community-event'
+import { displayDate } from '~/src/shared/dates'
 
 const { Youtube } = require('vue-youtube')
 
@@ -116,6 +114,16 @@ const { Youtube } = require('vue-youtube')
 })
 export default class EventPage extends Vue {
   @Prop() event: ICommunityEvent
+
+  get isUpcomingEvent() {
+    if (!this.event.edate) return false
+    return this.event.edate > new Date().getTime() + 60 * 60 * 1000
+  }
+
+  get eventDateFormatted() {
+    if (!this.event.edate) return
+    return displayDate(this.event.edate, this.isUpcomingEvent)
+  }
 
   getYoutubeId() {
     const regExp =
