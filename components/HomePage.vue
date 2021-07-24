@@ -20,7 +20,6 @@
             v-for="(item, index) in pastEvents"
             :key="index"
             :event="item"
-            @playVideo="playVideo"
           />
         </div>
       </div>
@@ -39,9 +38,9 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 import Header from '~/components/Header.vue'
 import UpcomingEventCard from '~/components/UpcomingEventCard.vue'
-import { CommunityEvent } from '~/models/community-event'
 import Footer from '~/components/Footer.vue'
 import Card from '~/components/Card.vue'
+import Subscribe from './Subscribe.vue'
 
 @Component({
   components: {
@@ -49,13 +48,9 @@ import Card from '~/components/Card.vue'
     Footer,
     UpcomingEventCard,
     Header,
+    Subscribe
   },
   props: ['pastEvents', 'futureEvents'],
 })
-export default class extends Vue {
-  playVideo(event: CommunityEvent) {
-    // eslint-disable-next-line no-console
-    console.log(event)
-  }
-}
+export default class HomePage extends Vue {}
 </script>

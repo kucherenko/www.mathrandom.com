@@ -4,14 +4,14 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { CommunityEvent } from '~/models/community-event'
+import { ICommunityEvent } from '~/models/community-event'
 import EventPage from '~/components/EventPage.vue'
 
 @Component({
   components: { EventPage },
 })
 export default class extends Vue {
-  event: CommunityEvent
+  event: ICommunityEvent
 
   head() {
     return {

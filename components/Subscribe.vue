@@ -116,7 +116,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 const { validate } = require('isemail')
 
 @Component({})
-export default class extends Vue {
+export default class Subscribe extends Vue {
   isEmailError = false
   serverError = false
   email = ''

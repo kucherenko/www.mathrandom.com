@@ -1,7 +1,7 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="h-4 w-4 inline"
+    class="inline h-4 w-4"
     :class="classes"
     fill="none"
     viewBox="0 0 24 24"
@@ -20,5 +20,5 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({ props: ['classes'] })
-export default class extends Vue {}
+export default class IconLink extends Vue {}
 </script>

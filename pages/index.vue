@@ -1,19 +1,15 @@
 <template>
-  <Home :past-events="pastEvents" :future-events="futureEvents" />
+  <HomePage :past-events="pastEvents" :future-events="futureEvents" />
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import Home from '~/components/Home.vue'
+import HomePage from '~/components/HomePage.vue'
 
 @Component({
-  components: {
-    Home,
-  },
+  components: { HomePage, },
 })
 export default class extends Vue {
-  modal = true
-
   async asyncData(context: any) {
     const pastEvents = await context
       .$content('events')

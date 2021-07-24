@@ -33,11 +33,13 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { Author } from '~/models/author'
+import { IAuthor } from '~/models/author'
+import AuthorImage from './AuthorImage.vue'
 
-@Component({})
+@Component({
+  components: { AuthorImage }
+})
 export default class extends Vue {
-  @Prop() user: Author
-  @Prop() color: string
+  @Prop() user: IAuthor
 }
 </script>

@@ -65,11 +65,7 @@
             v-if="event.edate > new Date().getTime() + 60 * 60 * 1000"
             class="mt-4 p-4 bg-gray-100 rounded-md"
           >
-            <Register
-              :show-modal="showRegister"
-              :event="event"
-              @hide="showRegister = false"
-            />
+            <Register :event="event" />
           </div>
         </div>
       </main>
@@ -95,18 +91,22 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { CommunityEvent } from '~/models/community-event'
 import AuthorCard from '~/components/AuthorCard.vue'
+import Footer from '~/components/Footer.vue'
+import Header from '~/components/Header.vue'
+import IconCalendar from '~/components/Icon/Calendar.vue'
+import IconLanguage from '~/components/Icon/Language.vue'
+import IconPin from '~/components/Icon/Pin.vue'
+import Register from '~/components/Register.vue'
+import { ICommunityEvent } from '~/models/community-event'
 
 const { Youtube } = require('vue-youtube')
 
 @Component({
-  components: { AuthorCard, Youtube },
+  components: { AuthorCard, Header, Footer, Register, IconPin, IconLanguage, IconCalendar, Youtube },
 })
-export default class extends Vue {
-  @Prop() event: CommunityEvent
-
-  showRegister = false
+export default class EventPage extends Vue {
+  @Prop() event: ICommunityEvent
 
   getYoutubeId() {
     const regExp =

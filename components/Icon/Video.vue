@@ -16,5 +16,5 @@
 import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({ props: ['classes'] })
-export default class extends Vue {}
+export default class IconVideo extends Vue {}
 </script>

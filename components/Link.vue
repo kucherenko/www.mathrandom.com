@@ -13,11 +13,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { Link } from '~/models/link'
+import { ILink } from '~/models/link'
 
 @Component({})
-export default class extends Vue {
-  @Prop() source: Link | string
+export default class link extends Vue {
+  @Prop() source: ILink | string
   @Prop() color: string
 
   getIcon(url: string) {

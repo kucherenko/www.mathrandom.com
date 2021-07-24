@@ -174,14 +174,13 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { CommunityEvent } from '~/models/community-event'
+import { ICommunityEvent } from '~/models/community-event'
 
 const { validate } = require('isemail')
 
 @Component({})
 export default class extends Vue {
-  @Prop() showModal: boolean
-  @Prop() event: CommunityEvent
+  @Prop() event: ICommunityEvent
   $recaptcha: any
 
   email = ''
@@ -198,20 +197,6 @@ export default class extends Vue {
       // eslint-disable-next-line no-console
       console.error(e)
     }
-  }
-
-  private setDefaults() {
-    this.email = ''
-    this.subscribeGlobal = true
-    this.isEmailError = false
-    this.serverError = false
-    this.loader = false
-    this.step = 1
-  }
-
-  hideModal() {
-    this.setDefaults()
-    this.$emit('hide')
   }
 
   async onSubmit() {

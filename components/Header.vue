@@ -2,7 +2,7 @@
   <div class="bg-graphite">
     <div class="flex items-center py-5 max-w-4xl mx-auto">
       <a href="/">
-        <Logo subcolor="#fcd34d" />
+        <Logo />
       </a>
 
       <div
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import Logo from '~/components/Logo/index.vue'
+import Logo from '~/components/Logo.vue'
 
 @Component({
   components: { Logo },

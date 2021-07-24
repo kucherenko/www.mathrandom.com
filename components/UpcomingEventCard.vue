@@ -14,7 +14,6 @@
           class="text-right"
         >
           <AuthorImage
-            :color="$getThemeColor(event.theme)"
             :author="author"
             size="s"
           />
@@ -26,20 +25,7 @@
       </div>
       <div class="md:col-span-3">
         <div class="leading-5 align-middle text-gray-500">
-          <!-- TODO: make fullsized add-to-calendar link -->
-          <!-- TODO: verify SSR of this element -->
-          <add-to-calendar
-            :title="'Math.random() — ' + event.title"
-            :location="event.link"
-            :start="new Date(event.edate)"
-            :end="new Date(event.edate + 60 * 60 * 1000)"
-            :details="event.title + '\n\n' + event.link"
-            inline-template
-          >
-            <google-calendar>
-              <IconCalendar classes="h-5 w-5 mr-2 inline float-left" />
-            </google-calendar>
-          </add-to-calendar>
+          <IconCalendar classes="h-5 w-5 mr-2 inline float-left" />
           {{ eventDate }}
         </div>
 
@@ -114,18 +100,19 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { CommunityEvent } from '~/models/community-event'
-import { Author } from '~/models/author'
-import AuthorImage from '~/components/Author/Image.vue'
+import { ICommunityEvent } from '~/models/community-event'
+import { IAuthor } from '~/models/author'
+import AuthorImage from '~/components/AuthorImage.vue'
 import Register from '~/components/Register.vue'
+import IconPin from '~/components/Icon/Pin.vue'
+import IconLanguage from '~/components/Icon/Language.vue'
+import IconCalendar from '~/components/Icon/Calendar.vue'
 
 @Component({
-  components: { Register, AuthorImage },
+  components: { Register, AuthorImage, IconPin, IconLanguage, IconCalendar },
 })
 export default class extends Vue {
-  @Prop() event: CommunityEvent
-
-  showRegister = false
+  @Prop() event: ICommunityEvent
 
   get eventDate() {
     try {
@@ -140,7 +127,7 @@ export default class extends Vue {
     }
   }
 
-  getSize(authors: Array<Author>) {
+  getSize(authors: IAuthor[]) {
     if (authors.length === 1) {
       return 'm'
     }
@@ -152,15 +139,3 @@ export default class extends Vue {
   }
 }
 </script>
-
-<style>
-.slide {
-  min-height: 630px;
-}
-
-@media only screen and (min-width: 768px) {
-  .test {
-    min-height: 400px;
-  }
-}
-</style>
