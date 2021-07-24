@@ -24,35 +24,20 @@
 
       <div
         class="
-          flex flex-wrap
+          flex flex-wrap gap-6
           justify-center
-          font-medium
-          leading-5
           whitespace-no-wrap
-          xl:justify-start
         "
       >
         <a
           href="https://t.me/mathrandomcommunity"
-          class="
-            flex
-            items-center
-            mx-3
-            sm:mx-4
-            xl:ml-0 xl:mr-8
-          "
+          class="flex items-center"
         >
           <img alt="Telegram group" src="@/assets/img/icons/telegram.svg" class="w-12 h-12" />
         </a>
         <a
           href="https://www.youtube.com/c/Mathrandomjavascriptcommunity"
-          class="
-            flex
-            items-center
-            mx-3
-            sm:mx-4
-            xl:ml-0 xl:mr-8
-          "
+          class="flex items-center"
         >
           <img alt="Youtube channel" src="@/assets/img/icons/youtube.svg" class="w-12 h-12" />
         </a>
