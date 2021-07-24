@@ -1,38 +1,30 @@
 <template>
-  <div class="my-3">
-    <div
-      class="
-        flex flex-col
-        bg-dark-gray
-        min-w-full
-        shadow-md
-        py-8
-        px-8
-        rounded-md
-      "
-    >
-      <div class="flex flex-col flex-row gap-8">
-        <img
-          class="rounded-full border-4 h-24 w-24 mx-auto object-cover"
-          :src="user.image"
-          :alt="user.name"
-        />
-        <div class="flex flex-col text-center text-left">
-          <div class="font-medium text-lg font-bold" :class="'text-' + color">
+  <div class="flex flex-col min-w-full">
+    <div class="flex gap-2">
+      <div>
+        <div class="w-16">
+          <AuthorImage :author="user" size="xs" />
+        </div>
+      </div>
+
+      <div class="flex flex-col">
+        <div class="text-lg">
+          <span class="font-bold text-gray-600">
             {{ user.name }}
-          </div>
-          <div class="text-white font-bold mb-3">{{ user.title }}</div>
-          <div class="text-white">
-            {{ user.about }}
-          </div>
-          <div class="flex flex-row gap-4 my-auto text-2xl mx-auto mx-0 mt-3">
-            <Link
-              v-for="(link, index) in user.links"
-              :key="index"
-              :source="link"
-              :color="color"
-            />
-          </div>
+          </span>
+          <span class="text-gray-400">{{ user.title }}</span>
+        </div>
+
+        <div class="text-gray-700">
+          {{ user.about }}
+        </div>
+
+        <div class="flex flex-row gap-3 mt-2 text-2xl text-gray-400">
+          <Link
+            v-for="(link, index) in user.links"
+            :key="index"
+            :source="link"
+          />
         </div>
       </div>
     </div>
@@ -41,11 +33,13 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { Author } from '~/models/author'
+import AuthorImage from './AuthorImage.vue'
+import { IAuthor } from '~/models/author'
 
-@Component({})
+@Component({
+  components: { AuthorImage },
+})
 export default class extends Vue {
-  @Prop() user: Author
-  @Prop() color: string
+  @Prop() user: IAuthor
 }
 </script>

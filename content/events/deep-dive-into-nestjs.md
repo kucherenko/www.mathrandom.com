@@ -1,6 +1,5 @@
 ---
 title: Deep Dive Into NestJS
-theme: 4
 eventDate: 07-01-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=b48oOe0VOOc

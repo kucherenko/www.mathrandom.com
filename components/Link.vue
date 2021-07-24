@@ -1,5 +1,5 @@
 <template>
-  <a :href="source.href ? source.href : source" :class="'text-' + color">
+  <a :href="source.href ? source.href : source" class="hover:text-blue-500">
     <!--    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" :class="'text-'+color" fill="none" viewBox="0 0 24 24"-->
     <!--         stroke="currentColor">-->
     <!--      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"-->
@@ -13,11 +13,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { Link } from '~/models/link'
+import { ILink } from '~/models/link'
 
 @Component({})
-export default class extends Vue {
-  @Prop() source: Link | string
+export default class link extends Vue {
+  @Prop() source: ILink | string
   @Prop() color: string
 
   getIcon(url: string) {

@@ -2,9 +2,7 @@
   <div
     class="
       mx-auto
-      max-w-7xl
-      my-16
-      sm:my-6
+      max-w-4xl
       px-4
       sm:px-6
       lg:px-8
@@ -14,90 +12,6 @@
     "
   >
     <div
-      class="flex-none w-full text-center xl:w-auto xl:flex-auto xl:text-left"
-    >
-      <h1
-        class="
-          text-3xl
-          font-semibold
-          leading-9
-          text-white
-          font-display
-          sm:text-4xl sm:leading-10
-        "
-      >
-        Math.random() engineering community,
-        <span class="text-white sm:block">we love technologies. </span>
-      </h1>
-      <div
-        class="
-          flex flex-wrap
-          justify-center
-          mt-3
-          font-medium
-          leading-5
-          text-blue-100
-          whitespace-no-wrap
-          xl:justify-start
-        "
-      >
-        <a
-          href="https://t.me/mathrandomcommunity"
-          class="
-            flex
-            underline
-            hover:no-underline
-            items-center
-            mx-3
-            mt-3
-            sm:mx-4
-            xl:ml-0 xl:mr-8
-          "
-        >
-          <div class="mr-2">
-            <img src="@/assets/img/icons/telegram.svg" class="w-6 h-6" />
-          </div>
-          <div>Telegram</div>
-        </a>
-        <a
-          href="https://www.youtube.com/c/Mathrandomjavascriptcommunity"
-          class="
-            flex
-            underline
-            hover:no-underline
-            items-center
-            mx-3
-            mt-3
-            sm:mx-4
-            xl:ml-0 xl:mr-8
-          "
-        >
-          <div class="mr-2">
-            <img src="@/assets/img/icons/youtube.svg" class="w-6 h-6" />
-          </div>
-          <div>Youtube</div>
-        </a>
-        <a
-          href="https://t.me/mathrandom_chat"
-          class="
-            flex
-            underline
-            items-center
-            hover:no-underline
-            mx-3
-            mt-3
-            sm:mx-4
-            xl:mx-0
-          "
-        >
-          <div class="mr-2">
-            <img src="@/assets/img/icons/telegram.svg" class="w-6 h-6" />
-          </div>
-          <div>Chat</div>
-        </a>
-      </div>
-    </div>
-    <div
       class="
         flex flex-col
         w-full
@@ -105,12 +19,14 @@
         mt-10
         item-start
         sm:w-auto sm:space-y-2
-        xl:mx-0
       "
     >
-      <form
-        class="flex flex-col w-full p-2 mx-auto bg-white rounded-lg md:mt-0"
-      >
+      <div class="mt-4 text-center text-xl text-white mb-2">
+        <div>Subscribe to our future events and news.</div>
+        <div>No ads, no spam, just events.</div>
+      </div>
+
+      <form class="flex flex-col w-full">
         <input type="hidden" name="form-name" value="wickedUpdates" />
         <div class="flex flex-col w-full gap-2 md:justify-start md:flex-row">
           <div class="relative">
@@ -119,8 +35,9 @@
               type="email"
               name="email"
               placeholder="email@example"
-              :class="{ 'border-1 border-hot-red': isEmailError }"
+              :class="{ 'border-hot-red': isEmailError }"
               class="
+                border-4 border-transparent
                 flex-grow
                 w-full
                 px-4
@@ -144,19 +61,20 @@
           <button
             type="submit"
             class="
+              border-4 border-transparent
               flex
               items-center
               px-6
               py-2
               mt-auto
               font-semibold
-              text-graphite-gray
               transition
               duration-500
               ease-in-out
               transform
-              bg-hot-red
-              rounded-lg
+              text-graphite-gray
+              bg-blue-300
+              rounded-md
               uppercase
               focus:shadow-outline focus:outline-none focus:ring-2
               ring-offset-current ring-offset-2
@@ -188,9 +106,6 @@
           </button>
         </div>
       </form>
-      <p class="mt-4 text-sm text-white">
-        Subscribe for events and news, you won't be spammed...
-      </p>
     </div>
   </div>
 </template>
@@ -201,7 +116,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 const { validate } = require('isemail')
 
 @Component({})
-export default class extends Vue {
+export default class Subscribe extends Vue {
   isEmailError = false
   serverError = false
   email = ''

@@ -1,6 +1,5 @@
 ---
 title: Public interview for Business Analyst
-theme: 2
 eventDate: 03-04-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=hawMIGIDzBE

@@ -1,6 +1,5 @@
 ---
 title: Стратегия выхода Node.js в корпоративный сектор
-theme: 5
 eventDate: 02-24-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=FLcBrP1KFYk

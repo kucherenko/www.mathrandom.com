@@ -1,6 +1,5 @@
 ---
 title: Browser. Rendering. Performance
-theme: 1
 eventDate: 06-24-2021 19:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=JiutNiYU5zQ

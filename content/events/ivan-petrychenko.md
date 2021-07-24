@@ -1,6 +1,5 @@
 ---
 title: Авторский обучающий контент - плюсы, минусы, возможности и перспективы
-theme: 3
 eventDate: 02-04-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=kLN2Mvkp8rY

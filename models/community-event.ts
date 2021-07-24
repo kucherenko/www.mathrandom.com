@@ -1,14 +1,13 @@
-import { Author } from '~/models/author'
+import { IAuthor } from '~/models/author'
 
-export interface CommunityEvent {
+export interface ICommunityEvent {
   slug: string
   title: string
-  theme?: string
   // eslint-disable-next-line camelcase
   eventDate: string
   edate?: number
   listId?: string
   language: string
   link: string
-  authors: Array<Author>
+  authors: Array<IAuthor>
 }

@@ -1,6 +1,5 @@
 ---
 title: Event Loop крутится, task'и мутятся
-theme: 2
 eventDate: 01-28-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=-t9TWD9FEfw

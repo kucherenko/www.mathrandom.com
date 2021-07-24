@@ -1,9 +1,9 @@
-import { Link } from '~/models/link'
+import { ILink } from '~/models/link'
 
-export interface Author {
+export interface IAuthor {
   name: string
   title: string
   about: string
   image: string
-  links: Array<Link> | Array<string>
+  links: Array<ILink> | Array<string>
 }
