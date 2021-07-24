@@ -1,6 +1,7 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    class="inline w-4 h-4"
     :class="classes"
     fill="none"
     viewBox="0 0 24 24"

@@ -1,7 +1,7 @@
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="inline w-4 h-4"
+    class="h-4 w-4 inline"
     :class="classes"
     fill="none"
     viewBox="0 0 24 24"
@@ -11,7 +11,7 @@
       stroke-linecap="round"
       stroke-linejoin="round"
       stroke-width="2"
-      d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+      d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
     />
   </svg>
 </template>

@@ -2,9 +2,7 @@
   <div
     class="
       mx-auto
-      max-w-7xl
-      my-16
-      sm:my-6
+      max-w-4xl
       px-4
       sm:px-6
       lg:px-8
@@ -21,11 +19,20 @@
         mt-10
         item-start
         sm:w-auto sm:space-y-2
-        xl:mx-0
       "
     >
+
+      <div class="mt-4 text-center text-xl text-white mb-2">
+        <div>
+          Subscribe to our future events and news.
+        </div>
+        <div>
+          No ads, no spam, just events.
+        </div>
+      </div>
+
       <form
-        class="flex flex-col w-full p-2 mx-auto bg-white rounded-lg md:mt-0"
+        class="flex flex-col w-full"
       >
         <input type="hidden" name="form-name" value="wickedUpdates" />
         <div class="flex flex-col w-full gap-2 md:justify-start md:flex-row">
@@ -35,8 +42,10 @@
               type="email"
               name="email"
               placeholder="email@example"
-              :class="{ 'border-1 border-hot-red': isEmailError }"
+              :class="{ 'border-hot-red': isEmailError }"
               class="
+                border-4
+                border-transparent
                 flex-grow
                 w-full
                 px-4
@@ -60,19 +69,21 @@
           <button
             type="submit"
             class="
+              border-4
+              border-transparent
               flex
               items-center
               px-6
               py-2
               mt-auto
               font-semibold
-              text-graphite-gray
               transition
               duration-500
               ease-in-out
               transform
-              bg-hot-red
-              rounded-lg
+              text-graphite-gray
+              bg-blue-300
+              rounded-md
               uppercase
               focus:shadow-outline focus:outline-none focus:ring-2
               ring-offset-current ring-offset-2
@@ -104,9 +115,7 @@
           </button>
         </div>
       </form>
-      <p class="mt-4 text-sm text-white">
-        Subscribe for events and news, you won't be spammed...
-      </p>
+
     </div>
   </div>
 </template>
