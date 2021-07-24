@@ -3,7 +3,6 @@
     <Header />
 
     <div class="max-w-4xl mx-auto py-24">
-
       <!-- INFO ICONS -->
       <div class="text-gray-500 flex gap-3">
         <div class="inline-block">
@@ -13,10 +12,8 @@
       </div>
 
       <main class="grid grid-cols-1 md:grid-cols-5 gap-4">
-
         <!-- LEFT SIDE -->
         <div class="col-span-2">
-
           <h1
             class="
               text-xl
@@ -49,18 +46,16 @@
               {{ event.language }}
             </div>
           </div>
-
         </div>
 
         <!-- RIGHT SIDE -->
         <div class="col-span-3">
-
           <!-- YOUTUBE -->
           <!-- TODO: implicitly set proper height -->
           <div
             v-if="getYoutubeId()"
             class="mx-auto overflow-hidden rounded-md"
-            style="height: 360px;"
+            style="height: 360px"
           >
             <youtube width="100%" :video-id="getYoutubeId()"></youtube>
           </div>
@@ -76,9 +71,7 @@
               @hide="showRegister = false"
             />
           </div>
-
         </div>
-
       </main>
 
       <div class="flex flex-col my-8 gap-4">
@@ -89,10 +82,7 @@
         />
       </div>
 
-      <div class="text-8xl mt-32 text-center">
-        🙌
-      </div>
-
+      <div class="text-8xl mt-32 text-center">🙌</div>
     </div>
 
     <div class="bg-gray-800">

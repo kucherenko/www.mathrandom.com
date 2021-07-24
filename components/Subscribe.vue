@@ -21,19 +21,12 @@
         sm:w-auto sm:space-y-2
       "
     >
-
       <div class="mt-4 text-center text-xl text-white mb-2">
-        <div>
-          Subscribe to our future events and news.
-        </div>
-        <div>
-          No ads, no spam, just events.
-        </div>
+        <div>Subscribe to our future events and news.</div>
+        <div>No ads, no spam, just events.</div>
       </div>
 
-      <form
-        class="flex flex-col w-full"
-      >
+      <form class="flex flex-col w-full">
         <input type="hidden" name="form-name" value="wickedUpdates" />
         <div class="flex flex-col w-full gap-2 md:justify-start md:flex-row">
           <div class="relative">
@@ -44,8 +37,7 @@
               placeholder="email@example"
               :class="{ 'border-hot-red': isEmailError }"
               class="
-                border-4
-                border-transparent
+                border-4 border-transparent
                 flex-grow
                 w-full
                 px-4
@@ -69,8 +61,7 @@
           <button
             type="submit"
             class="
-              border-4
-              border-transparent
+              border-4 border-transparent
               flex
               items-center
               px-6
@@ -115,7 +106,6 @@
           </button>
         </div>
       </form>
-
     </div>
   </div>
 </template>

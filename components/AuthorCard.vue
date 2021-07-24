@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="
-      flex flex-col
-      min-w-full
-    "
-  >
+  <div class="flex flex-col min-w-full">
     <div class="flex gap-2">
       <div>
         <div class="w-16">
@@ -13,7 +8,6 @@
       </div>
 
       <div class="flex flex-col">
-
         <div class="text-lg">
           <span class="font-bold text-gray-600">
             {{ user.name }}
@@ -32,11 +26,8 @@
             :source="link"
           />
         </div>
-
       </div>
-
     </div>
-
   </div>
 </template>
 

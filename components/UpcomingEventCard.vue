@@ -1,14 +1,7 @@
 <template>
-  <main class="mx-auto max-w-4xl my-4 text-gray-900 ">
-
+  <main class="mx-auto max-w-4xl my-4 text-gray-900">
     <div class="grid grid-cols-4 gap-6 mb-6">
-      <div class="
-        col-start-1
-        col-end-4
-        text-3xl
-        text-extrabold
-        text-blue-400
-      ">
+      <div class="col-start-1 col-end-4 text-3xl text-extrabold text-blue-400">
         # Join our upcoming event:
       </div>
     </div>
@@ -16,18 +9,18 @@
     <div class="grid grid-cols-4 gap-6">
       <div class="mt-7">
         <div
-          class="text-right"
           v-for="(author, index) in event.authors"
           :key="index"
+          class="text-right"
         >
           <AuthorImage
             :color="$getThemeColor(event.theme)"
             :author="author"
             size="s"
           />
-          <div >
-            <div class="font-bold text-gray-600">{{author.name}}</div>
-            <div class="text-gray-400">{{author.title}}</div>
+          <div>
+            <div class="font-bold text-gray-600">{{ author.name }}</div>
+            <div class="text-gray-400">{{ author.title }}</div>
           </div>
         </div>
       </div>
@@ -44,11 +37,11 @@
             inline-template
           >
             <google-calendar>
-              <IconCalendar classes="h-5 w-5 mr-2 inline float-left"  />
+              <IconCalendar classes="h-5 w-5 mr-2 inline float-left" />
             </google-calendar>
           </add-to-calendar>
           {{ eventDate }}
-      </div>
+        </div>
 
         <h2
           class="
@@ -89,7 +82,7 @@
               Online
             </div>
 
-            <div class="inline-block" >
+            <div class="inline-block">
               <IconLanguage classes="h-6 w-6 mr-1 inline float-left" />
               {{ event.language }}
             </div>
@@ -107,15 +100,12 @@
               rounded-md
               text-white
               bg-yellow-500
-
               shadow
-              hover:shadow-md
-              hover:bg-yellow-600
+              hover:shadow-md hover:bg-yellow-600
             "
           >
             Register
           </a>
-
         </div>
       </div>
     </div>
@@ -125,7 +115,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { CommunityEvent } from '~/models/community-event'
-import { Author } from '~/models/author';
+import { Author } from '~/models/author'
 import AuthorImage from '~/components/Author/Image.vue'
 import Register from '~/components/Register.vue'
 
@@ -139,10 +129,12 @@ export default class extends Vue {
 
   get eventDate() {
     try {
-      let dt = new Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeStyle: 'long' });
-      let formatted = dt.format(this.event.edate);
-      return formatted;
-
+      const dt = new Intl.DateTimeFormat('en-US', {
+        dateStyle: 'medium',
+        timeStyle: 'long',
+      })
+      const formatted = dt.format(this.event.edate)
+      return formatted
     } catch {
       return new Date(this.event.eventDate).toLocaleString()
     }
@@ -150,13 +142,13 @@ export default class extends Vue {
 
   getSize(authors: Array<Author>) {
     if (authors.length === 1) {
-      return 'm';
+      return 'm'
     }
     if (authors.length === 2) {
-      return 's';
+      return 's'
     }
 
-    return 'xs';
+    return 'xs'
   }
 }
 </script>

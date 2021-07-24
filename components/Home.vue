@@ -11,7 +11,6 @@
 
     <div class="bg-gray-800">
       <div class="mx-auto max-w-4xl">
-
         <div class="text-blue-300 text-3xl py-6">
           # Check out our past events:
         </div>
@@ -24,7 +23,6 @@
             @playVideo="playVideo"
           />
         </div>
-
       </div>
     </div>
 
@@ -43,7 +41,7 @@ import Header from '~/components/Header.vue'
 import UpcomingEventCard from '~/components/UpcomingEventCard.vue'
 import { CommunityEvent } from '~/models/community-event'
 import Footer from '~/components/Footer.vue'
-import Card from '~/components/Card.vue';
+import Card from '~/components/Card.vue'
 
 @Component({
   components: {
@@ -52,7 +50,7 @@ import Card from '~/components/Card.vue';
     UpcomingEventCard,
     Header,
   },
-  props: ['pastEvents', 'futureEvents']
+  props: ['pastEvents', 'futureEvents'],
 })
 export default class extends Vue {
   playVideo(event: CommunityEvent) {

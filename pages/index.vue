@@ -1,5 +1,5 @@
 <template>
-  <Home :pastEvents="pastEvents" :futureEvents="futureEvents" />
+  <Home :past-events="pastEvents" :future-events="futureEvents" />
 </template>
 
 <script lang="ts">
@@ -8,7 +8,7 @@ import Home from '~/components/Home.vue'
 
 @Component({
   components: {
-    Home
+    Home,
   },
 })
 export default class extends Vue {

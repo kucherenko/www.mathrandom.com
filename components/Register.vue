@@ -2,7 +2,6 @@
   <div>
     <div>
       <div class="relative w-auto mx-auto">
-
         <!--STEP 1-->
         <form v-if="step === 1" @submit.prevent="onSubmit">
           <!--body-->
@@ -17,11 +16,12 @@
                   block
                   w-full
                   rounded-md
-                  border-2
-                  border-gray-300
+                  border-2 border-gray-300
                   shadow-sm
                   focus:border-indigo-300
-                  focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  focus:ring
+                  focus:ring-indigo-200
+                  focus:ring-opacity-50
                 "
                 :class="{ 'border-hot-red': isEmailError }"
                 placeholder="john@example.com"
@@ -38,8 +38,7 @@
                 text-white
                 bg-yellow-500
                 shadow
-                hover:shadow-md
-                hover:bg-yellow-600
+                hover:shadow-md hover:bg-yellow-600
               "
               type="submit"
             >
@@ -118,7 +117,6 @@
             inline-template
           >
             <div class="grid grid-cols-2 gap-4 text-center text-sm">
-
               <google-calendar id="google-calendar">
                 <div class="bg-white p-2 rounded-md shadow-md">
                   <div>
@@ -166,7 +164,6 @@
                   Add Youtube Notification
                 </a>
               </div>
-
             </div>
           </add-to-calendar>
         </div>

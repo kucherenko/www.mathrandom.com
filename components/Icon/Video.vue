@@ -13,9 +13,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({ props: ['classes'] })
-export default class extends Vue {
-}
+export default class extends Vue {}
 </script>
