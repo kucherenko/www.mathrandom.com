@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <Header />
-    <EventPage :event="event" />
-    <Footer />
-  </div>
+  <EventPage :event="event" />
 </template>
 
 <script lang="ts">

@@ -95,7 +95,7 @@
           <div class="flex-grow"></div>
 
           <a
-            href="#"
+            :href="'/events/' + event.slug"
             class="
               text-base
               font-bold
@@ -109,16 +109,9 @@
               hover:shadow-md
               hover:bg-yellow-600
             "
-            @click.prevent="showRegister = true"
           >
             Register
           </a>
-
-          <Register
-            :show-modal="showRegister"
-            :event="event"
-            @hide="showRegister = false"
-            />
 
         </div>
       </div>
