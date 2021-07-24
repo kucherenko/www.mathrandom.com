@@ -16,7 +16,7 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import { ILink } from '~/models/link'
 
 @Component({})
-export default class link extends Vue {
+export default class Link extends Vue {
   @Prop() source: ILink | string
   @Prop() color: string
 

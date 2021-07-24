@@ -48,8 +48,26 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: true,
-      brands: true
+      solid: [
+        'faExternalLinkAlt'
+      ],
+      brands: [
+        'faTwitter',
+        'faGithub',
+        'faFacebook',
+        'faSpeakerDeck',
+        'faMedium',
+        'faTelegram',
+        'faYoutube',
+        'faMeetup',
+        'faLinkedin',
+        'faProductHunt',
+        'faPatreon',
+        'faNpm',
+        'faInstagram',
+        'faTiktok',
+        'faVk',
+      ]
     }
   },
 
