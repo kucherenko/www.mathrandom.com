@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="'events/' + event.slug"
+    :href="'/events/' + event.slug"
     class="
       p-3
       flex
@@ -15,33 +15,33 @@
       active:border-blue-300 active:shadow-lg
     "
   >
-    <div class="min-w-max">
-      <div
+    <span class="min-w-max">
+      <span
         v-for="(author, index) in event.authors"
         :key="index"
         class="block"
         :class="{ '-mt-7': index }"
       >
         <AuthorImage :author="author" size="xs" />
-      </div>
-    </div>
+      </span>
+    </span>
 
-    <div class="flex flex-col justify-center">
+    <span class="flex flex-col justify-center">
       <h2 class="text-2xl tracking-tight font-extrabold">
         {{ event.title }}
       </h2>
-      <div>
-        <div class="inline-block mr-4 text-gray-400">
+      <span class="block">
+        <span class="inline-block mr-4 text-gray-400">
           <IconCalendar />
           {{ eventDateFormatted }}
-        </div>
+        </span>
 
-        <div class="inline-block text-gray-400">
+        <span class="inline-block text-gray-400">
           <IconLanguage />
           {{ event.language }}
-        </div>
-      </div>
-    </div>
+        </span>
+      </span>
+    </span>
   </a>
 </template>
 
