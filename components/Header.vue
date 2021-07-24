@@ -1,6 +1,6 @@
 <template>
   <div class=" bg-graphite">
-    <div class="flex py-5 max-w-4xl mx-auto">
+    <div class="flex items-center py-5 max-w-4xl mx-auto">
       <a href="/">
         <Logo subcolor="#fcd34d" />
       </a>

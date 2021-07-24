@@ -13,10 +13,10 @@
       <div class="mx-auto max-w-4xl">
 
         <div class="text-blue-300 text-3xl py-6">
-          # Checkout our past events:
+          # Check out our past events:
         </div>
 
-        <div class="max-w-2xl m-auto grid grid-cols-1 gap-6">
+        <div class="max-w-4xl m-auto grid grid-cols-2 gap-6">
           <Card
             v-for="(item, index) in pastEvents"
             :key="index"

@@ -2,7 +2,13 @@
   <a
     :href="'events/' + event.slug"
     class="
-      p-3 flex gap-4 rounded bg-white text-gray-900 shadow-md
+      p-3
+      flex
+      items-center
+      gap-4
+      rounded
+      bg-white
+      text-gray-900 shadow-md
       border-4
       border-solid
       border-transparent
@@ -14,7 +20,8 @@
       active:shadow-lg
     "
   >
-    <div class="w-20">
+
+    <div class="min-w-max">
       <div
         v-for="(author, index) in event.authors"
         :key="index"
