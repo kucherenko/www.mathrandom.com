@@ -12,7 +12,7 @@
         </div>
       </div>
 
-      <main class="grid grid-cols-1 md:grid-cols-5 gap-4 lg:gap-4">
+      <main class="grid grid-cols-1 md:grid-cols-5 gap-4">
 
         <!-- LEFT SIDE -->
         <div class="col-span-2">
@@ -38,10 +38,10 @@
             />
           </div>
 
-          <div class="text-gray-500">
-            <div class="inline-block">
+          <div class="mt-2 text-gray-400">
+            <div class="inline-block mr-2">
               <IconPin />
-              <a :href="event.link">Online</a>
+              Online
             </div>
 
             <div class="inline-block">
@@ -56,10 +56,11 @@
         <div class="col-span-3">
 
           <!-- YOUTUBE -->
-          <!-- TODO: implicitly set height -->
+          <!-- TODO: implicitly set proper height -->
           <div
             v-if="getYoutubeId()"
             class="mx-auto overflow-hidden rounded-md"
+            style="height: 360px;"
           >
             <youtube width="100%" :video-id="getYoutubeId()"></youtube>
           </div>
@@ -67,38 +68,8 @@
           <!-- REGISTER -->
           <div
             v-if="event.edate > new Date().getTime() + 60 * 60 * 1000"
-            class="mt-4 p-4 bg-blue-100 rounded-md"
+            class="mt-4 p-4 bg-gray-100 rounded-md"
           >
-            <div>
-              <h2>REGISTER</h2>
-
-              <input id="register" class="border-3 border-blue-400" />
-            </div>
-
-            <a
-              href="#"
-              class="
-                w-full
-                flex
-                items-center
-                justify-center
-                py-3
-                border border-transparent
-                text-base
-                shadow
-                font-bold
-                uppercase
-                rounded-md
-                text-graphite-gray
-                md:py-4
-                md:text-lg
-                md:px-10
-              "
-              @click.prevent="showRegister = true"
-            >
-              Register
-            </a>
-
             <Register
               :show-modal="showRegister"
               :event="event"
@@ -110,7 +81,7 @@
 
       </main>
 
-      <div class="flex flex-col gap-4 mt-4">
+      <div class="flex flex-col my-8 gap-4">
         <AuthorCard
           v-for="(author, index) in event.authors"
           :key="index"
@@ -118,7 +89,7 @@
         />
       </div>
 
-      <div class="text-8xl pt-32 text-center">
+      <div class="text-8xl mt-32 text-center">
         🙌
       </div>
 
