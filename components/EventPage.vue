@@ -103,7 +103,16 @@ import { ICommunityEvent } from '~/models/community-event'
 const { Youtube } = require('vue-youtube')
 
 @Component({
-  components: { AuthorCard, Header, Footer, Register, IconPin, IconLanguage, IconCalendar, Youtube },
+  components: {
+    AuthorCard,
+    Header,
+    Footer,
+    Register,
+    IconPin,
+    IconLanguage,
+    IconCalendar,
+    Youtube,
+  },
 })
 export default class EventPage extends Vue {
   @Prop() event: ICommunityEvent

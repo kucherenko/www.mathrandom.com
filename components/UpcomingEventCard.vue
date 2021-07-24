@@ -13,10 +13,7 @@
           :key="index"
           class="text-right"
         >
-          <AuthorImage
-            :author="author"
-            size="s"
-          />
+          <AuthorImage :author="author" size="s" />
           <div>
             <div class="font-bold text-gray-600">{{ author.name }}</div>
             <div class="text-gray-400">{{ author.title }}</div>

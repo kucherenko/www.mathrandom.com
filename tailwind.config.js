@@ -54,7 +54,7 @@ module.exports = {
         'toxic-green': '#06FFBB',
         graphite: '#1a1a1a',
         'dark-gray': '#1b1b1b',
-      }
+      },
     },
   },
   variants: {},

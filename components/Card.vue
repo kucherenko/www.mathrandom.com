@@ -47,15 +47,14 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import { ICommunityEvent } from '~/models/community-event'
 import AuthorImage from './AuthorImage.vue'
 import IconCalendar from './Icon/Calendar.vue'
 import IconLanguage from './Icon/Language.vue'
 import IconPin from './Icon/Pin.vue'
-
+import { ICommunityEvent } from '~/models/community-event'
 
 @Component({
-  components: { IconCalendar, IconLanguage, IconPin, AuthorImage }
+  components: { IconCalendar, IconLanguage, IconPin, AuthorImage },
 })
 export default class Card extends Vue {
   @Prop() event: ICommunityEvent

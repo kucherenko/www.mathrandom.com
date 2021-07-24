@@ -7,7 +7,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
 import HomePage from '~/components/HomePage.vue'
 
 @Component({
-  components: { HomePage, },
+  components: { HomePage },
 })
 export default class extends Vue {
   async asyncData(context: any) {

@@ -36,11 +36,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import Subscribe from './Subscribe.vue'
 import Header from '~/components/Header.vue'
 import UpcomingEventCard from '~/components/UpcomingEventCard.vue'
 import Footer from '~/components/Footer.vue'
 import Card from '~/components/Card.vue'
-import Subscribe from './Subscribe.vue'
 
 @Component({
   components: {
@@ -48,7 +48,7 @@ import Subscribe from './Subscribe.vue'
     Footer,
     UpcomingEventCard,
     Header,
-    Subscribe
+    Subscribe,
   },
   props: ['pastEvents', 'futureEvents'],
 })
