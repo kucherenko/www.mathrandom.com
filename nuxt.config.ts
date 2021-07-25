@@ -69,9 +69,6 @@ export default {
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
     "@nuxtjs/recaptcha",
-
-    // https://github.com/nuxt-community/critters-module
-    '@nuxtjs/critters',
   ],
 
   fontawesome: {
