@@ -6,6 +6,15 @@ export default {
   // https://nuxtjs.org/docs/2.x/features/deployment-targets
   target: 'static',
 
+  // enforcing trailing slash for static builds
+  router: {
+    trailingSlash: true,
+  },
+  sitemap: {
+    hostname: process.env.BASE_URL,
+    trailingSlash: true,
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Math.random() Community of engineers",

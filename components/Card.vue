@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="'/events/' + event.slug"
+    :href="'/events/' + event.slug + '/'"
     class="
       p-3
       flex

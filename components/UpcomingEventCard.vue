@@ -46,7 +46,7 @@
               hover:text-yellow-800
               active:text-yellow-800
             "
-            :href="'/events/' + event.slug"
+            :href="'/events/' + event.slug + '/'"
           >
             {{ event.title }}
           </a>
@@ -74,7 +74,7 @@
           <div class="flex-grow"></div>
 
           <a
-            :href="'/events/' + event.slug"
+            :href="'/events/' + event.slug + '/'"
             class="
               text-base
               font-bold

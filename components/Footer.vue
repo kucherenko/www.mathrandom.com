@@ -103,8 +103,5 @@
       apply.
     </div>
 
-    <div>
-      t:0
-    </div>
   </footer>
 </template>
