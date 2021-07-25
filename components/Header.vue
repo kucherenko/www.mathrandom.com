@@ -21,16 +21,24 @@
       </div>
 
       <div class="flex flex-wrap gap-6 justify-center whitespace-no-wrap">
-        <a href="https://t.me/mathrandomcommunity" class="flex items-center">
+        <a
+          href="https://t.me/mathrandomcommunity"
+          class="rounded-md p-1 hover:bg-gray-700"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <img
             alt="Telegram group"
             src="@/assets/img/icons/telegram.svg"
             class="w-12 h-12"
           />
         </a>
+
         <a
           href="https://www.youtube.com/c/Mathrandomjavascriptcommunity"
-          class="flex items-center"
+          class="rounded-md p-1 hover:bg-gray-700"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <img
             alt="Youtube channel"

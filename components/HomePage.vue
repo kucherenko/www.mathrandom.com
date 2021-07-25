@@ -9,9 +9,9 @@
       />
     </div>
 
-    <div class="bg-gray-800">
+    <div class="bg-gray-800 py-6">
       <div class="mx-auto max-w-4xl">
-        <div class="text-blue-300 text-3xl py-6">
+        <div class="text-blue-300 text-3xl pb-6">
           # Check out our past events:
         </div>
 
@@ -26,10 +26,13 @@
     </div>
 
     <div class="bg-gray-800">
-      <div class="mx-auto max-w-4xl">
+      <div class="mx-auto max-w-4xl py-8">
         <Subscribe />
-        <Footer />
       </div>
+    </div>
+
+    <div class="bg-gray-800">
+      <Footer />
     </div>
   </div>
 </template>
