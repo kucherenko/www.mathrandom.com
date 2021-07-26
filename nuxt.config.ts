@@ -59,7 +59,9 @@ export default {
     '@nuxtjs/fontawesome',
 
     // https://github.com/Developmint/nuxt-purgecss
-    'nuxt-purgecss',
+    // whitelisting some font-awesome classes, because we set the class dynamically
+    // NOTE: we might need to whitelist particular icon classes as well, e.g. fa-github
+    ['nuxt-purgecss', { whitelist: ['svg-inline--fa', 'fa-w-16'] }]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
