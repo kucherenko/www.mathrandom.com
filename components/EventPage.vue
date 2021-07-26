@@ -4,7 +4,7 @@
 
     <div class="max-w-4xl mx-auto py-24">
       <!-- INFO ICONS -->
-      <div class="text-gray-500 flex gap-3">
+      <div class="text-gray-600 flex gap-3">
         <div class="inline-block">
           <IconCalendar />
           {{ eventDateFormatted }}
@@ -35,7 +35,7 @@
             />
           </div>
 
-          <div class="mt-2 text-gray-400">
+          <div class="mt-2 text-gray-500">
             <div class="inline-block mr-2">
               <IconPin />
               Online

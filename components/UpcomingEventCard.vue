@@ -9,12 +9,12 @@
         <AuthorImage :author="author" :size="getSize" />
         <div>
           <div class="font-bold text-gray-600">{{ author.name }}</div>
-          <div class="text-gray-400">{{ author.title }}</div>
+          <div class="text-gray-500">{{ author.title }}</div>
         </div>
       </div>
     </div>
     <div class="md:col-span-3">
-      <div class="leading-5 align-middle text-gray-500">
+      <div class="leading-5 align-middle text-gray-600">
         <IconCalendar classes="h-5 w-5 mr-2 inline float-left" />
         {{ eventDateString }}
       </div>
@@ -52,7 +52,7 @@
       <!-- FOOTER -->
       <div class="flex items-center pt-4">
         <!-- info icons -->
-        <div class="text-gray-400">
+        <div class="text-gray-500">
           <div class="inline-block mr-4">
             <IconPin classes="h-6 w-6 mr-1 inline float-left" />
             Online

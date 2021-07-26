@@ -1,7 +1,7 @@
 <template>
   <div class="bg-graphite">
     <div class="flex items-center h-16 max-w-4xl mx-auto">
-      <a href="/">
+      <a href="/" title="home">
         <Logo />
       </a>
 

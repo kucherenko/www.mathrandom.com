@@ -54,7 +54,7 @@
         <div class="text-8xl my-32 text-center">&nbsp;🙌</div>
       </div> -->
 
-    <div class="block mt-5 text-center text-gray-500">
+    <div class="block mt-5 text-center text-gray-400">
       This site is protected by reCAPTCHA and the Google
       <a
         class="text-gray-300 underline"

@@ -12,7 +12,7 @@
           <span class="font-bold text-gray-600">
             {{ user.name }}
           </span>
-          <span class="text-gray-400">{{ user.title }}</span>
+          <span class="text-gray-500">{{ user.title }}</span>
         </div>
 
         <div class="text-gray-700">

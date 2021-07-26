@@ -30,13 +30,13 @@
       <h2 class="text-2xl tracking-tight font-extrabold">
         {{ event.title }}
       </h2>
-      <span class="block">
-        <span class="inline-block mr-4 text-gray-400">
+      <span class="block text-gray-500">
+        <span class="inline-block mr-4">
           <IconCalendar />
           {{ eventDateFormatted }}
         </span>
 
-        <span class="inline-block text-gray-400">
+        <span class="inline-block">
           <IconLanguage />
           {{ event.language }}
         </span>
