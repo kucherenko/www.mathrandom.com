@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <Header />
-
-    <div class="max-w-4xl mx-auto py-24">
+  <Section>
+    <main class="py-24">
       <!-- INFO ICONS -->
       <div class="text-gray-600 flex gap-3">
         <div class="inline-block">
@@ -11,7 +9,7 @@
         </div>
       </div>
 
-      <main class="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
         <!-- LEFT SIDE -->
         <div class="col-span-2">
           <h1
@@ -65,7 +63,7 @@
             <Register :event="event" />
           </div>
         </div>
-      </main>
+      </div>
 
       <div class="flex flex-col my-8 gap-4">
         <AuthorCard
@@ -76,21 +74,14 @@
       </div>
 
       <div class="text-8xl mt-32 text-center">🙌</div>
-    </div>
-
-    <div class="bg-gray-800">
-      <div class="mx-auto max-w-4xl">
-        <Footer />
-      </div>
-    </div>
-  </div>
+    </main>
+  </Section>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import AuthorCard from '~/components/AuthorCard.vue'
-import Footer from '~/components/Footer.vue'
-import Header from '~/components/Header.vue'
+import Section from '~/components/Section.vue'
 import IconCalendar from '~/components/Icon/Calendar.vue'
 import IconLanguage from '~/components/Icon/Language.vue'
 import IconPin from '~/components/Icon/Pin.vue'
@@ -102,9 +93,8 @@ const { Youtube } = require('vue-youtube')
 
 @Component({
   components: {
+    Section,
     AuthorCard,
-    Header,
-    Footer,
     Register,
     IconPin,
     IconLanguage,

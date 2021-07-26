@@ -13,7 +13,8 @@
         </div>
       </div>
     </div>
-    <div class="md:col-span-3">
+
+    <div class="col-span-3">
       <div class="leading-5 align-middle text-gray-600">
         <IconCalendar classes="h-5 w-5 mr-2 inline float-left" />
         {{ eventDateString }}
