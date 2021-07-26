@@ -2,11 +2,23 @@
   <div>
     <Header />
 
-    <div class="my-5 max-w-screen-lg mx-auto">
-      <UpcomingEventCard
-        v-if="futureEvents && futureEvents.length === 1"
-        :event="futureEvents[0]"
-      />
+    <div v-if="futureEvents.length" class="my-5 max-w-screen-lg mx-auto">
+      <main class="mx-auto max-w-4xl my-4 text-gray-900">
+        <div
+          class="
+            mb-6
+            col-start-1 col-end-4
+            text-3xl text-extrabold text-blue-400
+          "
+        >
+          # Join our upcoming
+          {{ futureEvents.length == 1 ? 'event' : 'events' }}:
+        </div>
+
+        <div v-for="event in futureEvents" :key="event.slug" class="my-6">
+          <UpcomingEventCard :event="event" />
+        </div>
+      </main>
     </div>
 
     <div class="bg-gray-800 py-6">
@@ -38,12 +50,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
 import Subscribe from './Subscribe.vue'
 import Header from '~/components/Header.vue'
 import UpcomingEventCard from '~/components/UpcomingEventCard.vue'
 import Footer from '~/components/Footer.vue'
 import Card from '~/components/Card.vue'
+import { ICommunityEvent } from '~/models/community-event'
 
 @Component({
   components: {
@@ -53,7 +66,9 @@ import Card from '~/components/Card.vue'
     Header,
     Subscribe,
   },
-  props: ['pastEvents', 'futureEvents'],
 })
-export default class HomePage extends Vue {}
+export default class HomePage extends Vue {
+  @Prop({ required: true }) pastEvents: ICommunityEvent[]
+  @Prop({ required: true }) futureEvents: ICommunityEvent[]
+}
 </script>
