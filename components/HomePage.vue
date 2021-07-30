@@ -14,6 +14,12 @@
         </Section>
       </div>
 
+      <div class="py-8 bg-gray-800">
+        <Section>
+          <Subscribe />
+        </Section>
+      </div>
+
       <div class="bg-gray-800 py-6">
         <Section>
           <div class="text-blue-300 text-3xl pb-6">
@@ -30,12 +36,6 @@
         </Section>
       </div>
     </main>
-
-    <div class="py-8 bg-gray-800">
-      <Section>
-        <Subscribe />
-      </Section>
-    </div>
   </div>
 </template>
 

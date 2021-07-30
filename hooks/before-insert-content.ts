@@ -8,68 +8,6 @@ interface Image {
   tags: string[]
 }
 
-//
-// const client = require('@sendgrid/client')
-// const ImageKit = require('imagekit')
-//
-// const imagekit = new ImageKit({
-//   publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
-//   privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
-//   urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
-// })
-// let images: string[]
-//
-// client.setApiKey(process.env.SENDGRID_API_KEY)
-// async (document: any) => {
-//   const avatars = await getAvatarsList()
-//   console.log(avatars)
-//   const request = {
-//     method: 'GET',
-//     url: '/v3/marketing/lists',
-//   }
-//   const [, result] = await client.request(request)
-//   const mailLists = result.result.reduce((obj: any, item: any) => {
-//     return {
-//       ...obj,
-//       [item.name]: item.id,
-//     }
-//   }, {})
-//   if (document.extension === '.md' && document.eventDate) {
-//     document.edate = Date.parse(document.eventDate)
-//     if (!mailLists.hasOwnProperty(document.slug)) {
-//       const createListRequest = {
-//         method: 'POST',
-//         url: '/v3/marketing/lists',
-//         body: {
-//           name: document.slug,
-//         },
-//       }
-//       try {
-//         const [, result] = await client.request(createListRequest)
-//         document.listId = result.id
-//       } catch (e) {
-//         console.error(
-//           `Error with creation list for ${document.slug} ${e.message}`
-//         )
-//       }
-//     } else {
-//       document.listId = mailLists[document.slug]
-//     }
-//   }
-// }
-//
-// async function getAvatarsList(): Promise<string[]> {
-//   if (images) {
-//     return images
-//   }
-//   const list = await imagekit.listFiles({
-//     limit: 100,
-//     path: '/mathrandom-speakers/',
-//   })
-//   images = list.map((i: any) => i.name)
-//   return images
-// }
-
 class SendgridService {
   client: any
   lists: any
