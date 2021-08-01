@@ -1,7 +1,12 @@
 <template>
   <header class="flex items-center h-16">
     <a href="/" title="home">
-      <Logo />
+      <img
+        src="@/assets/img/logos/logo-min.svg"
+        alt="logo"
+        height="40"
+        width="172"
+      />
     </a>
 
     <div
@@ -48,13 +53,3 @@
     </div>
   </header>
 </template>
-
-<script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import Logo from '~/components/Logo.vue'
-
-@Component({
-  components: { Logo },
-})
-export default class extends Vue {}
-</script>
