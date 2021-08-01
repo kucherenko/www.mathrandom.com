@@ -5,7 +5,6 @@
     </div>
 
     <form class="flex flex-col w-full">
-      <input type="hidden" name="form-name" value="wickedUpdates" />
       <div class="flex flex-col w-full gap-2 justify-center md:flex-row">
         <div class="relative">
           <input
@@ -17,10 +16,12 @@
             class="
               border-4 border-transparent
               flex-grow
-              w-64
+              w-full
+              md:w-64
               px-4
               py-2
-              mb-4
+              mb-2
+              md:mb-0
               text-base text-black
               transition
               ease-in-out
@@ -29,7 +30,6 @@
               rounded-md
               duration-650
               focus:outline-none focus:border-graphite-gray
-              sm:mb-0
               focus:bg-white focus:shadow-outline focus:ring-2
               ring-offset-current ring-offset-2
             "
@@ -41,6 +41,7 @@
             border-4 border-transparent
             flex
             items-center
+            justify-center
             px-6
             py-2
             mt-auto
