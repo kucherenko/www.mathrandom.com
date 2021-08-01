@@ -29,8 +29,11 @@
               bg-white
               rounded-md
               duration-650
-              focus:outline-none focus:border-graphite-gray
-              focus:bg-white focus:shadow-outline focus:ring-2
+              focus:outline-none
+              focus:border-graphite-gray
+              focus:bg-white
+              focus:shadow-outline
+              focus:ring-2
               ring-offset-current ring-offset-2
             "
           />
