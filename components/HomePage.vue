@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex-grow bg-gray-800">
     <main>
       <div v-if="futureEvents.length" class="my-5 text-gray-900">
         <Section>
@@ -14,7 +14,7 @@
         </Section>
       </div>
 
-      <div class="py-8 bg-gray-800">
+      <div class="py-8">
         <Section>
           <Subscribe />
         </Section>

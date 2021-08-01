@@ -1,13 +1,15 @@
 <template>
   <header class="flex items-center h-16">
-    <a href="/" title="home">
-      <img
-        src="@/assets/img/logos/logo-min.svg"
-        alt="logo"
-        height="40"
-        width="172"
-      />
-    </a>
+    <div class="sm:w-48">
+      <a href="/" title="home">
+        <img
+          src="@/assets/img/logos/logo-min.svg"
+          alt="logo"
+          height="40"
+          width="172"
+        />
+      </a>
+    </div>
 
     <div
       class="
@@ -24,7 +26,7 @@
       <div class="hidden sm:block">Let's talk tech!</div>
     </div>
 
-    <div class="flex flex-wrap gap-6 justify-center whitespace-no-wrap">
+    <div class="sm:w-48 flex flex-wrap gap-6 justify-end whitespace-no-wrap">
       <a
         href="https://t.me/mathrandomcommunity"
         class="rounded-md p-1 hover:bg-gray-700"

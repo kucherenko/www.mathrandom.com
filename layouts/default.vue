@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col min-h-full">
     <div class="bg-graphite">
       <Section>
         <Header />
