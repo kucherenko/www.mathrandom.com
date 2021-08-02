@@ -104,6 +104,7 @@ export default class Subscribe extends Vue {
   loader = false
 
   $recaptcha: any
+  $toast: any
 
   async mounted() {
     try {
@@ -125,10 +126,12 @@ export default class Subscribe extends Vue {
           token,
           email: this.email,
         })
+        this.$toast.show('Successfully subscribed')
         this.loader = false
       } catch (error) {
         this.loader = false
         this.serverError = true
+        this.$toast.error('Error while subscribing')
       }
     }
   }

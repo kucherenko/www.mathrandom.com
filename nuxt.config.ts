@@ -83,8 +83,12 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/recaptcha',
+    '@nuxtjs/toast',
   ],
-
+  toast: {
+    position: 'top-right',
+    duration: 3000,
+  },
   fontawesome: {
     icons: {
       solid: ['faExternalLinkAlt'],
