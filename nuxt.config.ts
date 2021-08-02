@@ -4,7 +4,7 @@ export default {
   // static rendering for fast SSR
   // NOTE: this might break recaptcha
   // https://nuxtjs.org/docs/2.x/features/deployment-targets
-  target: 'static',
+  target: 'server',
 
   // enforcing trailing slash for static builds
   router: {
