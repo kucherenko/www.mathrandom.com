@@ -19,7 +19,7 @@ export default class extends Vue {
     }
   }
 
-  async asyncData({ route, $content }: any) {
+  async asyncData({ route, $content, error }: any) {
     const [event] = await $content('events')
       .where({
         slug: route.params.slug,
@@ -28,6 +28,7 @@ export default class extends Vue {
       .catch((err: any) => {
         // eslint-disable-next-line no-console
         console.log(err)
+        error({ statusCode: 404, message: 'Post not found' })
       })
     return {
       event,
