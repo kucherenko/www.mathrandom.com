@@ -2,7 +2,6 @@
 title: Blockchain trends 2021
 eventDate: 09-09-2021 10:00 GMT+2
 language: Russian
-hidden: true
 link: https://www.youtube.com/watch?v=YxDU2PR-lTw
 authors:
   - name: Sasha Pitkevich
