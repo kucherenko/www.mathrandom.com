@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-grow bg-gray-800">
+  <div class="flex-grow">
     <main>
       <div v-if="futureEvents.length" class="my-5 text-gray-900">
         <Section>
@@ -14,7 +14,7 @@
         </Section>
       </div>
 
-      <div class="py-8">
+      <div class="py-8 bg-gray-800">
         <Section>
           <Subscribe />
         </Section>
@@ -41,8 +41,8 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import Subscribe from './Subscribe.vue'
-import Section from './Section.vue'
+import Subscribe from '../Subscribe.vue'
+import Section from '../Section.vue'
 import Header from '~/components/Header.vue'
 import UpcomingEventCard from '~/components/UpcomingEventCard.vue'
 import Footer from '~/components/Footer.vue'

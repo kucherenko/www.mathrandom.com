@@ -5,7 +5,7 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import { ICommunityEvent } from '~/models/community-event'
-import EventPage from '~/components/EventPage.vue'
+import EventPage from '~/components/pages/EventPage.vue'
 
 @Component({
   components: { EventPage },
