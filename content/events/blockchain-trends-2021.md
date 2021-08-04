@@ -1,7 +1,7 @@
 ---
 title: Blockchain trends 2021
-eventDate: 09-09-2021 18:00 GMT+3
-language: English
+eventDate: 09-09-2021 10:00 GMT+2
+language: Russian
 hidden: true
 link: https://www.youtube.com/watch?v=gzI_Gty7uWY
 authors:
