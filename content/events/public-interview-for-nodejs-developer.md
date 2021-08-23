@@ -1,5 +1,5 @@
 ---
-title: Public interview NodeJS developer
+title: Public Interview Node.js Developer
 eventDate: 09-02-2021 18:00 GMT+3
 language: Ukrainian, Russian
 link: https://www.youtube.com/watch?v=pKC5VF7O-P8
@@ -31,7 +31,7 @@ authors:
     image: https://dl.airtable.com/.attachmentThumbnails/c1597ad881deaee722d2975de662df47/63a74f38
 ---
 
-We invite you to a webinar in the format of a public interview for Node.JS developer.
+We invite you to a webinar in the format of a public interview for Node.js developer.
 What is usually asked in the interview?
 How to give the right answers?
 All the answers will be shown on the interview!
