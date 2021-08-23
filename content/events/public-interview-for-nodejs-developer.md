@@ -1,7 +1,7 @@
 ---
 title: Public interview NodeJS developer
 eventDate: 09-02-2021 18:00 GMT+3
-language: Ukrainian, Russian, English
+language: Ukrainian, Russian
 link: https://www.youtube.com/watch?v=pKC5VF7O-P8
 authors:
   - name: Mykola Manuilenko
