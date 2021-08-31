@@ -43,7 +43,7 @@
     "express": "^4.17.1",
     "imagekit": "^3.2.0",
     "isemail": "^3.2.0",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "nuxt-property-decorator": "^2.9.1",
     "slugify": "^1.6.0",
     "vue-add-to-calendar": "^1.0.7",
