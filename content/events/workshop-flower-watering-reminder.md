@@ -1,6 +1,6 @@
 ---
 title: "Workshop: Делаем напоминалку для полива цветов с Firebase"
-eventDate: 09-30-2021 18:00 GMT+2
+eventDate: 09-30-2021 18:00 GMT+3
 language: Russian
 link: https://www.youtube.com/watch?v=1hvUFd_CxI4
 authors:
