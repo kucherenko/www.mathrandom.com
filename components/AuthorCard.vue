@@ -15,9 +15,7 @@
           <span class="text-gray-500">{{ user.title }}</span>
         </div>
 
-        <div class="text-gray-700">
-          {{ user.about }}
-        </div>
+        <div class="text-gray-700 about" v-html="user.about"></div>
 
         <div class="flex flex-row gap-3 mt-2 text-2xl text-gray-400">
           <Link
@@ -32,15 +30,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'nuxt-property-decorator'
-import AuthorImage from './AuthorImage.vue'
-import { IAuthor } from '~/models/author'
-import Link from '~/components/Link.vue'
+import { Component, Prop, Vue } from "nuxt-property-decorator";
+import AuthorImage from "./AuthorImage.vue";
+import { IAuthor } from "~/models/author";
+import Link from "~/components/Link.vue";
 
 @Component({
-  components: { AuthorImage, Link },
+  components: { AuthorImage, Link }
 })
 export default class extends Vue {
-  @Prop() user: IAuthor
+  @Prop() user: IAuthor;
 }
 </script>
+
+<style>
+.about a {
+  text-decoration: underline;
+}
+.about a:hover {
+  text-decoration: none;
+}
+</style>
