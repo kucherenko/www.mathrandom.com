@@ -7239,10 +7239,10 @@ ignore@^5.1.1, ignore@^5.1.4, ignore@^5.1.8:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
-imagekit@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/imagekit/-/imagekit-3.2.0.tgz#1c7ccebbb07eedf5ad5c2888cfb447e22a7f8699"
-  integrity sha512-maeNVnflB9Oyu/YZL37+qn1/ux1zTKvL+42vREDYHLUGyzdA4UnlONXQ4TPNUcE7dPNj2JpTd8ZIAvaUkjuUWQ==
+imagekit@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/imagekit/-/imagekit-3.2.2.tgz#9bb0076ceb189c8d0b124f744b7b9f286754409e"
+  integrity sha512-+NqOQC6L90SDKjDxxk4PMntFZuBKrc/ULUnSU3U9CiGkg6sLIXGS8Gl87N9jp1oyNO+8CHXHnvBA41SY4OZd/g==
   dependencies:
     hamming-distance "^1.0.0"
     lodash "^4.17.15"
