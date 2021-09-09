@@ -1,7 +1,7 @@
 ---
 title: Public interview for Senior JavaScript Developer
 eventDate: 10-22-2020 18:00 GMT+3
-language: Russian
+language: English
 link: https://www.youtube.com/watch?v=9gLHIYSzTFU
 authors:
   - name: Mark Shulhin
