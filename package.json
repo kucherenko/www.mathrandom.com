@@ -51,7 +51,7 @@
     "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
+    "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^12.1.4",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
