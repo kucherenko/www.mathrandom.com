@@ -30,16 +30,16 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "nuxt-property-decorator";
-import AuthorImage from "./AuthorImage.vue";
-import { IAuthor } from "~/models/author";
-import Link from "~/components/Link.vue";
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import AuthorImage from './AuthorImage.vue'
+import { IAuthor } from '~/models/author'
+import Link from '~/components/Link.vue'
 
 @Component({
-  components: { AuthorImage, Link }
+  components: { AuthorImage, Link },
 })
 export default class extends Vue {
-  @Prop() user: IAuthor;
+  @Prop() user: IAuthor
 }
 </script>
 
