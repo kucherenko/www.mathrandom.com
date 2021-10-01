@@ -33,7 +33,7 @@ app.post('/subscribe', async (req: any, res: any) => {
 })
 
 async function checkReCAPTCHA(token: string, action: string): Promise<boolean> {
-  const { data } = await axios.get(
+  const { data }: any = await axios.get(
     `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`
   )
   return data.success && data.action === action
@@ -52,6 +52,7 @@ async function addContactToList(contacts: any[], lists: string[]) {
     const [result] = await client.request(createListRequest)
     return result.body
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.error(`Error with subscription ${e.message}`)
   }
 }
