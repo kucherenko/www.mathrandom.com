@@ -57,7 +57,7 @@ export async function getPlayer(uid: number) {
       filterByFormula: `{uid} = "${uid}"`,
     })
     .firstPage()
-  if (!existingUser || existingUser.id) {
+  if (!existingUser) {
     return false
   }
   const player = { id: existingUser.id, ...existingUser.fields }
