@@ -57,6 +57,9 @@ export async function getPlayer(uid: number) {
       filterByFormula: `{uid} = "${uid}"`,
     })
     .firstPage()
+  if (!existingUser || existingUser.id) {
+    return false
+  }
   const player = { id: existingUser.id, ...existingUser.fields }
   myCache.set('player-' + uid, player)
   return player
