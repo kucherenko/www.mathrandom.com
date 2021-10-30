@@ -6,7 +6,7 @@ export async function flag(ctx: Context) {
   if (text && from) {
     const [, no, ...answerParts] = text.split(' ')
     if (!no || !answerParts) {
-      ctx.reply('Use /flag {flag number} {result} command')
+      return ctx.reply('Use /flag {flag number} {result} command')
     }
     const answer = answerParts.join(' ')
 
