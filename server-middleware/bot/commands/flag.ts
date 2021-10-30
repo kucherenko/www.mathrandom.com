@@ -12,6 +12,12 @@ export async function flag(ctx: Context) {
 
     const flag = await getFlagById(no)
 
+    if (!flag) {
+      return ctx.reply(
+        'The flag number is wrong. Use /flags to get right flag number'
+      )
+    }
+
     if (flag.result.toLowerCase() === answer.toLowerCase()) {
       const player = await getPlayer(from.id)
       try {
@@ -20,7 +26,11 @@ export async function flag(ctx: Context) {
         return ctx.reply(e.message)
       }
 
-      ctx.replyWithHTML(`Good job! Your bonus <b>-${+flag.bonus * 100}%</b>. Use /status for get information about your points.`)
+      ctx.replyWithHTML(
+        `Good job! Your bonus <b>-${
+          +flag.bonus * 100
+        }%</b>. Use /status for get information about your points.`
+      )
     } else {
       ctx.reply('Wrong answer, try again!')
     }
