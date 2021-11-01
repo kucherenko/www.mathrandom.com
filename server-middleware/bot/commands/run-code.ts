@@ -8,9 +8,7 @@ export async function runCode(ctx: Context) {
   const { text: code, from } = ctx.message as any
   const exercise = await getExercise(process.env.EXERCISE as string)
   await ctx.replyWithHTML(
-    `Run the code (node ${process.version})
-
-<pre>${code}</pre> `
+    `Running this code in <code>node ${process.version}</code> ...`
   )
   try {
     // eslint-disable-next-line no-template-curly-in-string
@@ -20,5 +18,5 @@ export async function runCode(ctx: Context) {
     return ctx.reply(`Oops! Error: ${e.message}`)
   }
   await saveCode(code, from)
-  return ctx.replyWithHTML(`Good job! Current points is <b>${code.length}</b>`)
+  return ctx.replyWithHTML(`Good job! This code is <b>${code.length}</b> symbols long, use /status to get your current score!`)
 }
