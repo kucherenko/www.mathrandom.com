@@ -10,8 +10,8 @@ Your base score would be the length of your JS solution.
 Every captured flag would grant you a 10% reduction to your summary score.
 
 Example:
-If your code length is 100 and you found 2 flags with 10% bonus for each, then your summary score is:
-<pre>summary = 100 - 100 * 0.2 = 80</pre>
+If your code length is 100 and you found two flags with 5% and 15% bonuses, then your summary score would be:
+<pre>summary = 100 - 100 * (0.05 + 0.15) = 80</pre>
 
 Send your javascript code to the bot to submit your solution.
 Then read the /flags tips and capture them using <pre>/flag {flag number} {result}</pre> command!
