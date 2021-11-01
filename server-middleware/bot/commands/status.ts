@@ -9,7 +9,7 @@ export async function status(ctx: Context) {
 ${
   player.points
     ? '<b>Code length</b>: ' + player.points
-    : "You haven't submitted your solution yet."
+    : "You haven't submitted a working solution yet."
 }
 <b>Bonus</b>: -${+player.bonus * 100}%
 <b>Total</b>: ${player.total}
