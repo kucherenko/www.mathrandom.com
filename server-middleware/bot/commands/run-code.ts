@@ -8,9 +8,7 @@ export async function runCode(ctx: Context) {
   const { text: code, from } = ctx.message as any
   const exercise = await getExercise(process.env.EXERCISE as string)
   await ctx.replyWithHTML(
-    `Run the code (node ${process.version})
-
-<pre>${code}</pre> `
+    `Running this code in <code>node ${process.version}</code> ...`
   )
   try {
     // eslint-disable-next-line no-template-curly-in-string
