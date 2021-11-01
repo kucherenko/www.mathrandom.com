@@ -3,12 +3,11 @@ import { Context } from 'telegraf'
 import { VM } from 'vm2'
 import { getExercise, saveCode } from '../storage.service'
 
-const vm = new VM({
-  timeout: 1000,
-  sandbox: { assert },
-})
-
 export async function runCode(ctx: Context) {
+  const vm = new VM({
+    timeout: 1000,
+    sandbox: { assert },
+  })
   const { text: code, from } = ctx.message as any
   console.log(`Player ${from.id} run code ${code}`)
   const exercise = await getExercise(process.env.EXERCISE as string)
