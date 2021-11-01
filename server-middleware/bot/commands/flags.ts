@@ -4,12 +4,16 @@ import { Flag, getFlags } from '../storage.service'
 export async function flags(ctx: Context) {
   const flags = await getFlags()
   ctx.replyWithHTML(`
-    List of tasks, for check a flag send following command <pre>/flag {number} {answer}</pre>
+    <b>Flag tips</b>
+
  ${flags
    .map(
      (flag: Flag) =>
        `<b>${flag.id}</b>. ${flag.input} (bonus -${100 * +flag.bonus}%)`
    )
    .join('\n ')}
+   
+   To capture a flag send the answer via <pre>/flag {number} {answer}</pre> bot command.
+   E.g. if you discovered that the answer to the first flag challenge is "The_Answer", then send <pre>/flag 1 The_Answer</pre>.
   `)
 }
