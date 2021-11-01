@@ -6,8 +6,8 @@ export async function help(ctx: Context) {
 
 Our challenge consists of two parts: writing a short implementation of the /exercise and capturing the /flags.
 
-Your base score would be the length of your JS solution.
-Every captured flag would grant you a 10% reduction to your summary score.
+Your base score would be the length of your JS solution (the lower — the better!).
+And every captured flag would grant you some reduction to your summary score.
 
 Example:
 If your code length is 100 and you found two flags with 5% and 15% bonuses, then your summary score would be:
