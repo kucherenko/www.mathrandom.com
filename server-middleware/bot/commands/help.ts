@@ -2,25 +2,29 @@ import { Context } from 'telegraf'
 
 export async function help(ctx: Context) {
   await ctx.replyWithHTML(`
-Math.random() Biathlon competition bot.
+<b><a href="https://t.me/mathrandomcommunity">Math.random()</a> Biathlon Bot 🤖</b>
 
-The bot help to make competition with two activities:
+Our challenge consists of two parts: writing a short implementation of the /exercise and capturing the /flags.
 
-1. Write shorter implementation for exercise
-2. Find flags and get bonus, bonus apply to task length
+Your base score would be the length of your JS solution (the lower — the better!).
+And every captured flag would grant you some reduction to your summary score.
 
 Example:
-code length is 100 and player have found 2 flags with 10% of bonus of each flag,
-total = length - length * (sum of bonuses/100) = 100 - 100 (20 / 100) = 80
+If your code length is 100 and you found two flags with 5% and 15% bonuses, then your summary score would be:
+<pre>summary = 100 - 100 * (0.05 + 0.15) = 80</pre>
 
-Send javascript code to the bot for check exercise implementation and length of code.
+Send your javascript code to the bot to submit your solution.
+Then read the /flags tips and capture them using <pre>/flag {flag number} {result}</pre> command!
+Send /status - to get your current score at any time.
 
-Bot commands:
+Good Luck! 🍀
+
+All bot commands:
 /help - show this message
 /exercise - show exercise description
 /flags - show all flags tips
-/status - information about current points
-/flag {flag number} {result} - check flag and get bonus
-/env - show information about environment for code running
+/status - information about current score
+/flag {flag number} {result} - submit a flag solution and get a bonus for it
+/env - show information about the code execution environment
 `)
 }
