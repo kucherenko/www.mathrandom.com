@@ -7,9 +7,14 @@ export async function start(ctx: Context) {
   if (!player) {
     return
   }
-  if (player.is_new) {
-    ctx.reply('Welcome! Use /help for get more information about the bot.')
-  } else {
-    ctx.reply('Welcome Back! Dont forget about /help')
-  }
+
+  ctx.replyWithHTML(`
+    <b>Welcome to Math.random() Biathlon Challenge!</b>
+
+    Use /challenge command to get challenge details.
+    Use /flags to get flags tips.
+    Use /help to get more information about the bot.
+
+    Good Luck 🍀
+  `)
 }
