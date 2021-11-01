@@ -9,12 +9,12 @@ export async function start(ctx: Context) {
   }
 
   ctx.replyWithHTML(`
-    <b>Welcome to Math.random() Biathlon Challenge!</b>
+<b>Welcome to Math.random() Biathlon Challenge!</b>
 
-    Use /challenge command to get challenge details.
-    Use /flags to get flags tips.
-    Use /help to get more information about the bot.
+Use /exercise command to get challenge details.
+Use /flags to get flags tips.
+Use /help to get more information about the bot.
 
-    Good Luck 🍀
+Good Luck! 🍀
   `)
 }

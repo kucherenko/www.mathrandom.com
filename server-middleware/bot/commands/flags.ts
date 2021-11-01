@@ -9,9 +9,11 @@ export async function flags(ctx: Context) {
  ${flags
    .map(
      (flag: Flag) =>
-       `<b>${flag.id}</b>. ${flag.input} (bonus -${100 * +flag.bonus}%)`
+       `<b>Flag #${flag.id}</b> (bonus -${100 * +flag.bonus}%):
+
+<code>${flag.input}</code>`
    )
-   .join('\n ')}
+   .join('\n\n ')}
    
    To capture a flag send the answer via <pre>/flag {number} {answer}</pre> bot command.
    E.g. if you discovered that the answer to the first flag challenge is "The_Answer", then send <pre>/flag 1 The_Answer</pre>.

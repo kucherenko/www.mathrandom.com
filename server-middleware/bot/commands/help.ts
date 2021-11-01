@@ -2,7 +2,7 @@ import { Context } from 'telegraf'
 
 export async function help(ctx: Context) {
   await ctx.replyWithHTML(`
-<b><a href="https://t.me/mathrandomcommunity">Math.random()</a> Biathlon Bot 🤖</b>
+<b>Math.random() Biathlon Bot 🤖</b>
 
 Our challenge consists of two parts: writing a short implementation of the /exercise and capturing the /flags.
 
@@ -13,8 +13,8 @@ Example:
 If your code length is 100 and you found two flags with 5% and 15% bonuses, then your summary score would be:
 <pre>summary = 100 - 100 * (0.05 + 0.15) = 80</pre>
 
-Send your javascript code to the bot to submit your solution.
-Then read the /flags tips and capture them using <pre>/flag {flag number} {result}</pre> command!
+<b>Send your javascript code directly to this bot to submit your solution.</b>
+Then read the /flags tips and capture them using <pre>/flag {flag number} {answer}</pre> command!
 Send /status - to get your current score at any time.
 
 Good Luck! 🍀
