@@ -14,7 +14,7 @@ export async function flag(ctx: Context) {
 
     if (!flag) {
       return ctx.reply(
-        'The flag number is wrong. Use /flags to get right flag number'
+        'The flag number is wrong. Use /flags to get the correct flag number'
       )
     }
 
@@ -29,10 +29,10 @@ export async function flag(ctx: Context) {
       ctx.replyWithHTML(
         `Good job! Your bonus <b>-${
           +flag.bonus * 100
-        }%</b>. Use /status for get information about your points.`
+        }%</b>. Use /status to get information about your score.`
       )
     } else {
-      ctx.reply('Wrong answer, try again!')
+      ctx.reply('Sorry, this answer is not correct. Please, try again!')
     }
   }
 }
