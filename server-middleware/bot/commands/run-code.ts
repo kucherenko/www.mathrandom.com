@@ -20,5 +20,5 @@ export async function runCode(ctx: Context) {
     return ctx.reply(`Oops! Error: ${e.message}`)
   }
   await saveCode(code, from)
-  return ctx.replyWithHTML(`Good job! Now your base score is <b>${code.length}</b>, use /status to get the summary`)
+  return ctx.replyWithHTML(`Good job! This code is <b>${code.length}</b> symbols long, use /status to get your current score!`)
 }
