@@ -1,10 +1,14 @@
 import assert from 'assert'
-import vm from 'vm'
 import { Context } from 'telegraf'
+import { VM } from 'vm2'
 import { getExercise, saveCode } from '../storage.service'
 
+const vm = new VM({
+  timeout: 1000,
+  sandbox: { assert },
+})
+
 export async function runCode(ctx: Context) {
-  const context = { assert }
   const { text: code, from } = ctx.message as any
   const exercise = await getExercise(process.env.EXERCISE as string)
   await ctx.replyWithHTML(
@@ -12,8 +16,8 @@ export async function runCode(ctx: Context) {
   )
   try {
     // eslint-disable-next-line no-template-curly-in-string
-    const script = new vm.Script(exercise.test.replace('${code}', code))
-    script.runInContext(vm.createContext(context))
+    const script = exercise.test.replace('${code}', code)
+    vm.run(script)
   } catch (e) {
     return ctx.reply(`Oops! Error: ${e.message}`)
   }
