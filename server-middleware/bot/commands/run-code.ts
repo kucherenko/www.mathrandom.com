@@ -10,6 +10,7 @@ const vm = new VM({
 
 export async function runCode(ctx: Context) {
   const { text: code, from } = ctx.message as any
+  console.log(`Player ${from.id} run code ${code}`)
   const exercise = await getExercise(process.env.EXERCISE as string)
   await ctx.replyWithHTML(
     `Running this code in <code>node ${process.version}</code> ...`

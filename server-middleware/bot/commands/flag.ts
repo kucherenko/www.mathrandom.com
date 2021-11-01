@@ -4,6 +4,7 @@ import { getFlagById, getPlayer, saveAnswer } from '../storage.service'
 export async function flag(ctx: Context) {
   const { text, from } = ctx.message as any
   if (text && from) {
+    console.log(`Player ${from.id} run send flag ${text}`)
     const [, no, ...answerParts] = text.split(' ')
     if (!no || !answerParts) {
       return ctx.reply('Use /flag {flag number} {result} command')
