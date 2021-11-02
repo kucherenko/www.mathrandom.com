@@ -119,7 +119,7 @@ export async function saveCode(code: string, user: User) {
   if (!player) {
     player = await registerPlayer(user)
   }
-  if (player) {
+  if (!player) {
     throw new Error('Sorry, some errors in the bot. Please retry later.')
   }
 
