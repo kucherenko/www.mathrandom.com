@@ -116,22 +116,24 @@ export async function registerPlayer(
 
 export async function saveCode(code: string, user: User) {
   let player = await getPlayer(user.id)
-  if (player) {
+  if (!player) {
     player = await registerPlayer(user)
   }
   if (player) {
-    const data = {
-      commit: nanoid(8),
-      player: [player.id],
-      body: code,
-      length: code.length,
-    }
-    if (player.points > code.length || player.points === 0) {
-      myCache.del('player-' + player.id)
-    }
-    const savedCode = await base('code').create(data, { typecast: true })
-    return { id: savedCode.id, ...savedCode.fields }
+    throw new Error('Sorry, some errors in the bot. Please retry later.')
   }
+
+  const data = {
+    commit: nanoid(8),
+    player: [player.id],
+    body: code,
+    length: code.length,
+  }
+  if (player.points > code.length || player.points === 0) {
+    myCache.del('player-' + player.id)
+  }
+  const savedCode = await base('code').create(data, { typecast: true })
+  return { id: savedCode.id, ...savedCode.fields }
 }
 
 export async function saveAnswer(answer: string, flag: Flag, player: Player) {
