@@ -1,5 +1,10 @@
 import { Context } from 'telegraf'
-import { getFlagById, getPlayer, saveAnswer } from '../storage.service'
+import {
+  getFlagById,
+  getPlayer,
+  registerPlayer,
+  saveAnswer,
+} from '../storage.service'
 
 export async function flag(ctx: Context) {
   const { text, from } = ctx.message as any
@@ -20,18 +25,23 @@ export async function flag(ctx: Context) {
     }
 
     if (flag.result.toLowerCase() === answer.toLowerCase()) {
-      const player = await getPlayer(from.id)
-      try {
-        await saveAnswer(answer, flag, player)
-      } catch (e) {
-        return ctx.reply(e.message)
+      let player = await getPlayer(from.id)
+      if (player) {
+        player = await registerPlayer(from)
       }
+      if (player) {
+        try {
+          await saveAnswer(answer, flag, player)
+        } catch (e) {
+          return ctx.reply(e.message)
+        }
 
-      ctx.replyWithHTML(
-        `Good job! Your bonus <b>-${
-          +flag.bonus * 100
-        }%</b>. Use /status to get information about your score.`
-      )
+        ctx.replyWithHTML(
+          `Good job! Your bonus <b>-${
+            +flag.bonus * 100
+          }%</b>. Use /status to get information about your score.`
+        )
+      }
     } else {
       ctx.reply('Sorry, this answer is not correct. Please, try again!')
     }

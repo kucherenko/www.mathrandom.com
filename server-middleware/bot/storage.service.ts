@@ -48,8 +48,8 @@ export async function getExercise(name: string) {
   return result
 }
 
-export async function getPlayer(uid: number) {
-  if (myCache.get('player-' + uid)) {
+export async function getPlayer(uid: number, cache = true) {
+  if (cache && myCache.get('player-' + uid)) {
     return myCache.get('player-' + uid)
   }
   const [existingUser] = await base('players')
@@ -115,7 +115,10 @@ export async function registerPlayer(
 }
 
 export async function saveCode(code: string, user: User) {
-  const player = await getPlayer(user.id)
+  let player = await getPlayer(user.id)
+  if (player) {
+    player = await registerPlayer(user)
+  }
   if (player) {
     const data = {
       commit: nanoid(8),
@@ -123,7 +126,7 @@ export async function saveCode(code: string, user: User) {
       body: code,
       length: code.length,
     }
-    if (player.points > code.length) {
+    if (player.points > code.length || player.points === 0) {
       myCache.del('player-' + player.id)
     }
     const savedCode = await base('code').create(data, { typecast: true })

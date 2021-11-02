@@ -1,9 +1,12 @@
 import { Context } from 'telegraf'
-import { getPlayer } from '../storage.service'
+import { getPlayer, registerPlayer } from '../storage.service'
 
 export async function status(ctx: Context) {
   const { from } = ctx.message as any
-  const player = await getPlayer(from.id)
+  let player = await getPlayer(from.id, false)
+  if (player) {
+    player = await registerPlayer(from)
+  }
 
   ctx.replyWithHTML(`
 ${
