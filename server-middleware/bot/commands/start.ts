@@ -5,7 +5,8 @@ export async function start(ctx: Context) {
   const { from } = ctx.message as any
   const player = await registerPlayer(from)
   if (!player) {
-    return
+    console.log('Player not registered ' + JSON.stringify(from))
+    return ctx.reply('Sorry, some errors in the bot. Please retry later.')
   }
 
   ctx.replyWithHTML(`

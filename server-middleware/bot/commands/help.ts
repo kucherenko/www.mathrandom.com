@@ -26,5 +26,7 @@ All bot commands:
 /status - information about current score
 /flag {flag number} {result} - submit a flag solution and get a bonus for it
 /env - show information about the code execution environment
+
+For bug reporting use the form - https://airtable.com/shrbbd4zAW5AJGmkf
 `)
 }
