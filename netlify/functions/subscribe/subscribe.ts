@@ -9,10 +9,14 @@ export const handler: Handler = async (event) => {
   if (isRealUser) {
     try {
       const lists = body.listId ? [body.listId] : [process.env.MAIN_LIST_ID]
-      return await addContactToList(
+      const result = await addContactToList(
         [{ email: body.email }],
         body.subscribeGlobal ? [process.env.MAIN_LIST_ID, ...lists] : lists
       )
+      return {
+        statusCode: 200,
+        body: JSON.stringify(result),
+      }
     } catch (e) {
       return {
         statusCode: 400,
