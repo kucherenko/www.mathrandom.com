@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@netlify/functions": "^0.8.0",
     "@nuxt/content": "^1.15.0",
     "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/axios": "^5.13.6",
@@ -35,6 +36,7 @@
     "@tailwindcss/typography": "^0.4.1",
     "@types/axios": "^0.14.0",
     "@types/express": "^4.17.13",
+    "@types/node": "^14.17.32",
     "airtable": "^0.11.1",
     "axios": "^0.24.0",
     "body-parser": "^1.19.0",
@@ -48,6 +50,7 @@
     "nuxt-property-decorator": "^2.9.1",
     "slugify": "^1.6.1",
     "telegraf": "^4.4.2",
+    "typescript": "^4.2.4",
     "vm2": "^3.9.5",
     "vue-add-to-calendar": "^1.0.7",
     "vue-slick-carousel": "^1.0.6",
