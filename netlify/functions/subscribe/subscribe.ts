@@ -1,8 +1,8 @@
 import { Handler } from '@netlify/functions'
 
-export const handler: Handler = async (event, context) => {
+export const handler: Handler = async (event) => {
   const { name = 'stranger' } = event.queryStringParameters as any
-  await console.log(context)
+  await console.log(event)
   return {
     statusCode: 200,
     body: JSON.stringify({
