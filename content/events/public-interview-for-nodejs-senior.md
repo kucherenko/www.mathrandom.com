@@ -1,6 +1,6 @@
 ---
 title: Public Interview Node.js Developer
-eventDate: 11-11-2021 18:00 GMT+2
+eventDate: 11-11-2021 17:30 GMT+2
 language: Russian
 link: https://www.youtube.com/watch?v=cuDhmVGkKUU
 authors:
