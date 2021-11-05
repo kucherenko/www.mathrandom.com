@@ -6,10 +6,11 @@ import { start } from './bot/commands/start'
 import { help } from './bot/commands/help'
 import { exercise } from './bot/commands/exercise'
 import { status } from './bot/commands/status'
+const makeHandler = require('lambda-request-handler')
 
-const app = require('express')()
-
-const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN as string)
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN as string, {
+  telegram: { webhookReply: true },
+})
 
 bot.start(start)
 
@@ -31,8 +32,6 @@ bot.on('text', runCode)
 
 bot.launch()
 
-const secretPath = `/telegraf/${bot.secretPathComponent()}`
-const fullPath = `${process.env.TELEGRAM_BOT_URL}/api/v1/bot${secretPath}`
-bot.telegram.setWebhook(fullPath)
-app.use(bot.webhookCallback(secretPath))
-module.exports = { path: '/api/v1/bot', handler: app }
+export const handler = makeHandler(
+  bot.webhookCallback(process.env.BOT_HOOK_PATH ?? '/')
+)

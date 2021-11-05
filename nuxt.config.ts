@@ -141,9 +141,4 @@ export default {
   hooks: {
     'content:file:beforeInsert': contentFileBeforeInsertHook,
   },
-
-  serverMiddleware: [
-    '~/server-middleware/subscribe.ts',
-    '~/server-middleware/bot.ts',
-  ],
 }

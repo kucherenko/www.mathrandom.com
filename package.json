@@ -42,6 +42,7 @@
     "express": "^4.17.1",
     "imagekit": "^3.2.3",
     "isemail": "^3.2.0",
+    "lambda-request-handler": "^0.5.1-alpha1",
     "nanoid": "^3.1.30",
     "node-cache": "^5.1.2",
     "nuxt": "^2.15.8",
