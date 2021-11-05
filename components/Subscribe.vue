@@ -122,7 +122,7 @@ export default class Subscribe extends Vue {
       this.loader = true
       try {
         const token = await this.$recaptcha.execute('subscribe')
-        await this.$axios.post('/api/v1/subscribe', {
+        await this.$axios.post('/.netlify/functions/subscribe', {
           token,
           email: this.email,
         })
