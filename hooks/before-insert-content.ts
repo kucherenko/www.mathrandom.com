@@ -79,7 +79,6 @@ class ImageKitService {
         limit: 100,
         path: this.path,
       })
-      console.log(this.images)
     }
     return this.images
   }
