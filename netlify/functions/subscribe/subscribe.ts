@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { Handler } from '@netlify/functions'
-
 const client = require('@sendgrid/client')
+
+client.setApiKey(process.env.SENDGRID_API_KEY)
 
 export const handler: Handler = async (event) => {
   const body = JSON.parse(event.body ?? '{}')
@@ -14,7 +15,6 @@ export const handler: Handler = async (event) => {
         [{ email: body.email }],
         body.subscribeGlobal ? [process.env.MAIN_LIST_ID, ...lists] : lists
       )
-      console.log(result);
       return {
         statusCode: 200,
         body: JSON.stringify(result),
