@@ -5,6 +5,7 @@ const client = require('@sendgrid/client')
 
 export const handler: Handler = async (event) => {
   const body = JSON.parse(event.body ?? '{}')
+  console.log(body)
   const isRealUser = await checkReCAPTCHA(body.token, 'subscribe')
   if (isRealUser) {
     try {
@@ -13,6 +14,7 @@ export const handler: Handler = async (event) => {
         [{ email: body.email }],
         body.subscribeGlobal ? [process.env.MAIN_LIST_ID, ...lists] : lists
       )
+      console.log(result);
       return {
         statusCode: 200,
         body: JSON.stringify(result),

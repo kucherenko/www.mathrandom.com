@@ -13,7 +13,11 @@ export async function runCode(ctx: Context) {
   try {
     // eslint-disable-next-line no-template-curly-in-string
     const script = exercise.test.replace('${code}', code)
-    vm.runInNewContext(script, { assert: Object.freeze({ ...assert }) })
+    vm.runInNewContext(
+      script,
+      { assert: Object.freeze({ ...assert }) },
+      { timeout: 1000 }
+    )
   } catch (e) {
     return ctx.reply(`Oops! Error: ${e.message}`)
   }
