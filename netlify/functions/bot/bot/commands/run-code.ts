@@ -1,15 +1,9 @@
 import assert from 'assert'
 import { Context } from 'telegraf'
-import { VM } from 'vm2'
 import { getExercise, saveCode } from '../storage.service'
+const vm = require('vm')
 
 export async function runCode(ctx: Context) {
-  const vm = new VM({
-    timeout: 1000,
-    sandbox: {
-      assert: Object.freeze({ ...assert }),
-    },
-  })
   const { text: code, from } = ctx.message as any
   console.log(`Player ${from.id} run code ${code}`)
   const exercise = await getExercise(process.env.EXERCISE as string)
@@ -19,7 +13,7 @@ export async function runCode(ctx: Context) {
   try {
     // eslint-disable-next-line no-template-curly-in-string
     const script = exercise.test.replace('${code}', code)
-    vm.run(script)
+    vm.runInNewContext(script, { assert: Object.freeze({ ...assert }) })
   } catch (e) {
     return ctx.reply(`Oops! Error: ${e.message}`)
   }
