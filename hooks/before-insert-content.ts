@@ -136,9 +136,11 @@ function initialize() {
           const avatar: any = imageKitService.findAvatar(author.name)
           if (!avatar) {
             const res = await imageKitService.upload(author.image, author.name)
-            author.image = res.url + '?tr=w-100,h-100,fo-face'
+            author.image =
+              res.url + '?tr=w-100,h-100' + (author.noFace ? '' : ',fo-face')
           } else {
-            author.image = avatar.url + '?tr=w-100,h-100,fo-face'
+            author.image =
+              avatar.url + '?tr=w-100,h-100' + (author.noFace ? '' : ',fo-face')
           }
           return author
         })
