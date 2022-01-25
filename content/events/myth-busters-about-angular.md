@@ -3,7 +3,6 @@ title: Разрушаем мифы про Angular
 eventDate: 02-03-2022 18:00 GMT+2
 language: Russian
 link: https://www.youtube.com/
-hidden: true
 authors:
   - name: thekiba
     title: Lead Architect
