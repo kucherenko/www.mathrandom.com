@@ -16,6 +16,27 @@ export default class extends Vue {
   head() {
     return {
       title: this.event.title + ' - Math.random() Community of engineers',
+      meta: this.event.card
+        ? [
+            { hid: 'og-type', property: 'og:type', content: 'website' },
+            {
+              hid: 'og-title',
+              property: 'og:title',
+              content: this.event.title,
+            },
+            {
+              hid: 'og-desc',
+              property: 'og:description',
+              content: this.event.description,
+            },
+            { hid: 'og-image', property: 'og:image', content: this.event.card },
+            {
+              hid: 't-type',
+              name: 'twitter:card',
+              content: 'summary_large_image',
+            },
+          ]
+        : [],
     }
   }
 

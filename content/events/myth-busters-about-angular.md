@@ -3,6 +3,10 @@ title: Разрушаем мифы про Angular
 eventDate: 02-03-2022 18:00 GMT+2
 language: Russian
 link: https://www.youtube.com/watch?v=ZHvQv34WKlk
+card: /cards/myth-angular.png
+description: |
+  Очень часто вижу, что люди задаются таким вопросом: «А правда ли то, что Angular сложный, тяжелый и трудно поддерживаемый фреймворк?» или «Что проще выучить новичку: Angular или React?”
+  Это хорошие вопросы, которые ставят многих разработчиков в тупик. Расскажу на примерах, что на самом деле такое Angular.
 authors:
   - name: thekiba
     title: Lead Architect
