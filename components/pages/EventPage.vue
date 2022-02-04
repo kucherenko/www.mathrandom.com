@@ -27,7 +27,7 @@
               {{ event.title }}
             </h1>
 
-            <div>
+            <div class="e-description">
               <NuxtContent
                 class="prose-sm sm:prose lg:prose-lg xl:prose-2xl"
                 :document="event"
@@ -129,3 +129,10 @@ export default class EventPage extends Vue {
   }
 }
 </script>
+
+<style>
+.e-description a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+</style>
