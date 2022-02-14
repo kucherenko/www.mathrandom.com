@@ -10,7 +10,7 @@ description: |
 authors:
 - name: Timur Shemsedinov
   title: CTO at B-OS, Chief Architect at Metarhia, Lecturer at KPI & KSE
-  about: Researcher, lecturer, open-source software engineer - 3rd in github rating in Ukraine. NodeUA, Metarhia and How programming works community organizer (more than 20K engineers), speaker at ~40 TI conferences, have more then 200 video lectures on youtube and ~19K subscribers. 26 years in IT, expert in building distributed corporate applications, private cloud, systems architecture, Node.js, JavaScript, cybernetics, production automation, telemetry, network protocols.
+  about: "26 years in IT, expert in node.js & javascript, private clouds, software engineering, cybernetics, distributed systems, architecture, databases. 🔭 Researcher 🎓 Lecturer 💡 Advisor 👷 3rd in Ukraine by Github followers 🛡️ CTO @ Salucyber & B-OS, 📢 Speaker: ~70 talks ⬢ Chief architect @ Metarhia 📺 >230 free video lectures 🔔 28k subscribers ⚪ Metarhia community organizer ~35k engineers: 🟢 Metaeducation 👨‍💻 NodeUA 🌱 HowProgrammingWorks"
   image: https://dl.airtable.com/.attachmentThumbnails/e35edf95bf61ad4fb1e0a08ea8b7d04c/b599e1d8
   links:
   - https://github.com/tshemsedinov
@@ -18,6 +18,7 @@ authors:
   - https://www.meetup.com/NodeUA
   - https://github.com/HowProgrammingWorks/Index
   - https://github.com/metarhia
+  - https://github.com/meta-edu/Index/blob/main/Docs/The-Concept-RU.md
   - https://linkedin.com/in/shemsedinov
 ---
 
