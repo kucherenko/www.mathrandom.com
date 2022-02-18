@@ -39,7 +39,7 @@
     "axios": "^0.24.0",
     "body-parser": "^1.19.1",
     "core-js": "^3.19.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "imagekit": "^3.2.3",
     "isemail": "^3.2.0",
     "lambda-request-handler": "^0.5.1-alpha1",
