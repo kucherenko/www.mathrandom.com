@@ -997,10 +997,10 @@
     resolve-global "1.0.0"
     yargs "^17.0.0"
 
-"@commitlint/config-conventional@^15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-15.0.0.tgz#3bf1adf319e3b431de12ba82dc399524038b2d8f"
-  integrity sha512-eZBRL8Lk3hMNHp1wUMYj0qrZQEsST1ai7KHR8J1IDD9aHgT7L2giciibuQ+Og7vxVhR5WtYDvh9xirXFVPaSkQ==
+"@commitlint/config-conventional@^16.2.4":
+  version "16.2.4"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-16.2.4.tgz#56647108c89ed06fc5271242787550331988c0fb"
+  integrity sha512-av2UQJa3CuE5P0dzxj/o/B9XVALqYzEViHrMXtDrW9iuflrqCStWBAioijppj9URyz6ONpohJKAtSdgAOE0gkA==
   dependencies:
     conventional-changelog-conventionalcommits "^4.3.1"
 
@@ -7447,6 +7447,11 @@ imurmurhash@^0.1.4:
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
 
+in-process-request@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/in-process-request/-/in-process-request-0.3.1.tgz#0f73e0b0738cd92a1b5e9810200df3096ae85429"
+  integrity sha512-UHw+WuKNw3Eqd9OqwrU0doTZsTksE8xcYUyLLi1zP5auz8UcBPYa1PVLQTPF89i5cjtsXeeI8FbsOTXazaJY0w==
+
 indent-string@4, indent-string@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz"
@@ -8004,6 +8009,11 @@ istanbul-reports@^3.0.2:
   dependencies:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
+
+isutf8@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/isutf8/-/isutf8-3.1.1.tgz#3f2ac77f49affb23ae54813da1a4ab44aadf1d7b"
+  integrity sha512-5P2FgGyDsSnRMaLPVGVIgYgMxj50lBujvi5lsVgP1qvMWhxvkmVBWtPcIKgXw9j+/RnmxSvHg3e9tbDnPxx6dw==
 
 jest-changed-files@^27.3.0:
   version "27.3.0"
@@ -8764,6 +8774,14 @@ koa@^2.12.0:
     statuses "^1.5.0"
     type-is "^1.6.16"
     vary "^1.1.2"
+
+lambda-request-handler@^0.5.1-alpha1:
+  version "0.5.1-alpha1"
+  resolved "https://registry.yarnpkg.com/lambda-request-handler/-/lambda-request-handler-0.5.1-alpha1.tgz#94705ccd322d22d01a85bd4e1a3efc0239cd761d"
+  integrity sha512-wdEQH9ccbVCp1oE9Dpa5nVk6WE8qWIFpiih/7YtL6tKjp2vpjx3jdtUtyhlUS2XrZK4cJoD15S69aapNNBvI0A==
+  dependencies:
+    in-process-request "^0.3.0"
+    isutf8 "^3.1.1"
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
