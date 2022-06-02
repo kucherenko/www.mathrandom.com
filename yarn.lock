@@ -997,12 +997,12 @@
     resolve-global "1.0.0"
     yargs "^17.0.0"
 
-"@commitlint/config-conventional@^15.0.0":
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-15.0.0.tgz#3bf1adf319e3b431de12ba82dc399524038b2d8f"
-  integrity sha512-eZBRL8Lk3hMNHp1wUMYj0qrZQEsST1ai7KHR8J1IDD9aHgT7L2giciibuQ+Og7vxVhR5WtYDvh9xirXFVPaSkQ==
+"@commitlint/config-conventional@^17.0.2":
+  version "17.0.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-17.0.2.tgz#298c9076e25c1e8760f04ee1be8ce43c856a4b72"
+  integrity sha512-MfP0I/JbxKkzo+HXWB7B3WstGS4BiniotU3d3xQ9gK8cR0DbeZ4MuyGCWF65YDyrcDTS3WlrJ3ndSPA1pqhoPw==
   dependencies:
-    conventional-changelog-conventionalcommits "^4.3.1"
+    conventional-changelog-conventionalcommits "^5.0.0"
 
 "@commitlint/ensure@^15.0.0":
   version "15.0.0"
@@ -4632,10 +4632,10 @@ conventional-changelog-angular@^5.0.11:
     compare-func "^2.0.0"
     q "^1.5.1"
 
-conventional-changelog-conventionalcommits@^4.3.1:
-  version "4.6.1"
-  resolved "https://registry.npmjs.org/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-4.6.1.tgz"
-  integrity sha512-lzWJpPZhbM1R0PIzkwzGBCnAkH5RKJzJfFQZcl/D+2lsJxAwGnDKBqn/F4C1RD31GJNn8NuKWQzAZDAVXPp2Mw==
+conventional-changelog-conventionalcommits@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-5.0.0.tgz#41bdce54eb65a848a4a3ffdca93e92fa22b64a86"
+  integrity sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==
   dependencies:
     compare-func "^2.0.0"
     lodash "^4.17.15"
@@ -7447,6 +7447,11 @@ imurmurhash@^0.1.4:
   resolved "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
 
+in-process-request@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/in-process-request/-/in-process-request-0.3.1.tgz#0f73e0b0738cd92a1b5e9810200df3096ae85429"
+  integrity sha512-UHw+WuKNw3Eqd9OqwrU0doTZsTksE8xcYUyLLi1zP5auz8UcBPYa1PVLQTPF89i5cjtsXeeI8FbsOTXazaJY0w==
+
 indent-string@4, indent-string@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz"
@@ -8004,6 +8009,11 @@ istanbul-reports@^3.0.2:
   dependencies:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
+
+isutf8@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/isutf8/-/isutf8-3.1.1.tgz#3f2ac77f49affb23ae54813da1a4ab44aadf1d7b"
+  integrity sha512-5P2FgGyDsSnRMaLPVGVIgYgMxj50lBujvi5lsVgP1qvMWhxvkmVBWtPcIKgXw9j+/RnmxSvHg3e9tbDnPxx6dw==
 
 jest-changed-files@^27.3.0:
   version "27.3.0"
@@ -8764,6 +8774,14 @@ koa@^2.12.0:
     statuses "^1.5.0"
     type-is "^1.6.16"
     vary "^1.1.2"
+
+lambda-request-handler@^0.5.1-alpha1:
+  version "0.5.1-alpha1"
+  resolved "https://registry.yarnpkg.com/lambda-request-handler/-/lambda-request-handler-0.5.1-alpha1.tgz#94705ccd322d22d01a85bd4e1a3efc0239cd761d"
+  integrity sha512-wdEQH9ccbVCp1oE9Dpa5nVk6WE8qWIFpiih/7YtL6tKjp2vpjx3jdtUtyhlUS2XrZK4cJoD15S69aapNNBvI0A==
+  dependencies:
+    in-process-request "^0.3.0"
+    isutf8 "^3.1.1"
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
