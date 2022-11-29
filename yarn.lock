@@ -3024,16 +3024,16 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-airtable@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.npmjs.org/airtable/-/airtable-0.11.1.tgz"
-  integrity sha512-33zBuUDhLl+FWWAFxFjS1a+vJr/b+UK//EV943nuiimChWph6YykQjYPmu/GucQ30g7mgaqq+98uPD4rfDHOgg==
+airtable@^0.11.6:
+  version "0.11.6"
+  resolved "https://registry.yarnpkg.com/airtable/-/airtable-0.11.6.tgz#3b90f9c671ee93c4ad647eb131d630dea9f1f84a"
+  integrity sha512-Na67L2TO1DflIJ1yOGhQG5ilMfL2beHpsR+NW/jhaYOa4QcoxZOtDFs08cpSd1tBMsLpz5/rrz/VMX/pGL/now==
   dependencies:
     "@types/node" ">=8.0.0 <15"
     abort-controller "^3.0.0"
     abortcontroller-polyfill "^1.4.0"
     lodash "^4.17.21"
-    node-fetch "^2.6.1"
+    node-fetch "^2.6.7"
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -4674,6 +4674,11 @@ cookie@^0.3.1:
   version "0.3.1"
   resolved "https://registry.npmjs.org/cookie/-/cookie-0.3.1.tgz"
   integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
+
+cookie@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
+  integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
 cookies@~0.8.0:
   version "0.8.0"
@@ -8005,6 +8010,11 @@ istanbul-reports@^3.0.2:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
+isutf8@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/isutf8/-/isutf8-4.0.0.tgz#8b0061a96cf896faff3f086d7efa4ae93be8a872"
+  integrity sha512-mJtsQGFfAphKdVuRitEpc0eon4v5fuaB6v9ZJIrLnIyybh02sIIwJ2RQbLMp6UICVCfquezllupZIVcqzGzCPg==
+
 jest-changed-files@^27.3.0:
   version "27.3.0"
   resolved "https://registry.npmjs.org/jest-changed-files/-/jest-changed-files-27.3.0.tgz"
@@ -8765,6 +8775,14 @@ koa@^2.12.0:
     type-is "^1.6.16"
     vary "^1.1.2"
 
+lambda-request-handler@^0.5.1-alpha1:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/lambda-request-handler/-/lambda-request-handler-0.5.2.tgz#d2eac4dc0665927ce0e5017d29312dba0478790a"
+  integrity sha512-xVNwmaktmtnJ8rW0wFyv+D5dK48HG9o+D6ncunqI3+9yJHJrYZPr4qc7711ky8jbOWj7U74JZuYC6zVipPFTaQ==
+  dependencies:
+    isutf8 "^4.0.0"
+    light-my-request "^5.6.1"
+
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz"
@@ -8808,6 +8826,15 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+light-my-request@^5.6.1:
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/light-my-request/-/light-my-request-5.7.0.tgz#9195e25fcda1bc6916d94d6fb475056aa120a230"
+  integrity sha512-hIs5SH/K8/QuOdn3mwLxZnyIqr0AEyVD818lK8eq2gcfpuWUS5x6SjZ+XJumRGi8OBESiwwbfqtCL8eBNi42kw==
+  dependencies:
+    cookie "^0.5.0"
+    process-warning "^2.0.0"
+    set-cookie-parser "^2.4.1"
 
 lilconfig@2.0.4, lilconfig@^2.0.3:
   version "2.0.4"
@@ -9744,10 +9771,10 @@ node-emoji@^1.11.0:
   dependencies:
     lodash "^4.17.21"
 
-node-fetch@^2.6.1:
-  version "2.6.5"
-  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.5.tgz"
-  integrity sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
+node-fetch@^2.6.1, node-fetch@^2.6.7:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
+  integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -11383,6 +11410,11 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
+process-warning@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/process-warning/-/process-warning-2.0.0.tgz#341dbeaac985b90a04ebcd844d50097c7737b2ee"
+  integrity sha512-+MmoAXoUX+VTHAlwns0h+kFUWFs/3FZy+ZuchkgjyOu3oioLAo2LB5aCfKPh2+P9O18i3m43tUEv3YqttSy0Ww==
+
 process@^0.11.10:
   version "0.11.10"
   resolved "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
@@ -12352,6 +12384,11 @@ set-blocking@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz"
   integrity sha1-BF+XgtARrppoA93TgrJDkrPYkPc=
+
+set-cookie-parser@^2.4.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.5.1.tgz#ddd3e9a566b0e8e0862aca974a6ac0e01349430b"
+  integrity sha512-1jeBGaKNGdEq4FgIrORu/N570dwoPYio8lSoYLWmX7sQ//0JY08Xh9o5pBcgmHQ/MbsYp/aZnOe1s1lIsbLprQ==
 
 set-value@^2.0.0, set-value@^2.0.1:
   version "2.0.1"
