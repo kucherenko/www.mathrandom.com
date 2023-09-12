@@ -1,6 +1,6 @@
 ---
 title: Bun 1.0 released
-eventDate: 10-12-2023 18:00 GMT+2
+eventDate: 08-13-2023 18:00 GMT+2
 link: https://www.youtube.com/watch?v=ukRBBUFdVPI
 card: /cards/bun.png
 language: English
