@@ -1,6 +1,6 @@
 ---
 title: Returning to procedural programming after 20 years of OOP and FP
-eventDate: 10-05-2023 18:00 GMT+2
+eventDate: 10-05-2023 17:00 GMT+2
 language: Russian
 link: https://www.youtube.com/watch?v=YPa4aCQat1A
 card: /cards/timur.png
