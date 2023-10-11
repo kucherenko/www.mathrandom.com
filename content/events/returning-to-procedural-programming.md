@@ -20,6 +20,5 @@ authors:
   - https://github.com/meta-edu/Index/blob/main/Docs/The-Concept-RU.md
   - https://linkedin.com/in/shemsedinov
 ---
-🚨 The date of the event are changed to 10-19-2023 17:00 GMT+2
 
 Once I started with procedural programming, even non-structural, but later for more than 20 years I wrote in different paradigms like object-oriented, functional, reactive, parallel and asynchronous. I really like metaprogramming and for the last 7 years I have been writing multi-paradigm code in my everyday practice.  Now I need to reduce entry level and requirements for new specialists entering the platform I am working on. As well as I have one more challenge to increase the reliability and quality of the code in such a way that cannot be destroyed by any development process and any teams. Thus, I remembered object-based programming mixing it with procedural one and limited by immutability requirements. It gave us such an outstanding developer experience that I am happy to share some insights and cases with all of you.
