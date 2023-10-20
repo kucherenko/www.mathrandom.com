@@ -135,9 +135,18 @@ function initialize() {
         document.authors.map(async (author: any) => {
           const avatar: any = imageKitService.findAvatar(author.name)
           if (!avatar) {
-            const res = await imageKitService.upload(author.image, author.name)
-            author.image =
-              res.url + '?tr=w-100,h-100' + (author.noFace ? '' : ',fo-face')
+            try {
+              const res = await imageKitService.upload(
+                author.image,
+                author.name
+              )
+              author.image =
+                res.url + '?tr=w-100,h-100' + (author.noFace ? '' : ',fo-face')
+            } catch (e) {
+              console.log(
+                `Can't download file ${author.image}, for ${author.name}`
+              )
+            }
           } else {
             author.image =
               avatar.url + '?tr=w-100,h-100' + (author.noFace ? '' : ',fo-face')
