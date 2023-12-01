@@ -8,7 +8,7 @@ authors:
   - name: Andrii Rudavko
     title: Solution Architect II
     about: 20 years of web development
-    image: https://v5.airtableusercontent.com/v1/20/20/1694116800000/cRpo0i3CoT5cRzlezZVjyw/Q7Iei15ubLgBkWj3lrOC1hFH-l2eY9EoW6T61kS8Ej1vmHtPhL-ERbhQVTNZkuZlMr77QhT7xTtl-0ikaZKn_A/A3y7ec8xoavIWqYA85cpb_8QuAWJ0PFcDff4zXxrcEo
+    image: https://ik.imagekit.io/tdf7wfnyrgb/math-random-avatars/andrill_rudavko_xdbEZ7Vii.png?updatedAt=1694106853404
 ---
 
 Looking at genAI from the developer consumer perspective. Considering the approach of combining multiple genAI agents to create a more complex output.
