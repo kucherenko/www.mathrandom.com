@@ -13,7 +13,7 @@
           target="_blank"
         >
           <img
-            alt="Telegram group"
+            alt="Math.random() telegram channel"
             src="@/assets/img/icons/telegram.svg"
             class="w-24 h-24 inline-block"
           />
@@ -27,7 +27,7 @@
           target="_blank"
         >
           <img
-            alt="Youtube channel"
+            alt="Math.random() Youtube channel"
             src="@/assets/img/icons/youtube.svg"
             class="w-24 h-24 inline-block"
           />
@@ -41,7 +41,7 @@
           target="_blank"
         >
           <img
-            alt="Telegram group"
+            alt="Math.random() Telegram group"
             src="@/assets/img/icons/telegram.svg"
             class="w-24 h-24 inline-block"
           />
