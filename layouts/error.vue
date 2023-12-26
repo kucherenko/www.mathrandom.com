@@ -16,10 +16,8 @@
           >,
           <span class="block sm:inline">it should still work.</span>
         </div>
-        <div class="m-10">
-          <h1 style="font-size: 100px">
-            <Dice v-for="(slot, index) in slots" :number="slot" :key="index" />
-          </h1>
+        <div class="m-10 text-8xl">
+          <Dice v-for="(slot, index) in slots" :number="slot" :key="index" />
         </div>
         <div class="m-10">
           <button class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" type="button" @click="generateSlots">Random</button>
