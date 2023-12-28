@@ -3,7 +3,11 @@ title: Clash of Code Competition
 eventDate: 02-10-2022 18:00 GMT+2
 language: Russian
 link: https://www.youtube.com/watch?v=F9tuLWN-dy8
-card: /cards/clash-of-code.png
+card: https://ik.imagekit.io/tdf7wfnyrgb/math-random-cards/clash-of-code_9o9_WwmtL.png?updatedAt=1703766265215&tr=w-1024
+tags:
+  - clash of code
+  - codegolf
+  - competition
 description: Внимание, конкурс! Кто выиграет у Андрея Овсяника, победителя Math.random() Biathlon, и займет первое место в соревновании Clash of Code, получит футболку Math.random(). 
 authors:
   - name: Andrei Ausianik

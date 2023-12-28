@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxt/ui',
     '@nuxt/content',
+    '@nuxt/test-utils/module'
   ],
 
   experimental: {
@@ -19,7 +20,7 @@ export default defineNuxtConfig({
     inlineSSRStyles: false,
     renderJsonPayloads: true,
     typedPages: true,
-    search: true
+    ...{search: true}
   },
 
   css: [
@@ -38,8 +39,8 @@ export default defineNuxtConfig({
       },
     },
     prerender: {
-      crawlLinks: false,
-      routes: ['/'],
+      crawlLinks: true,
+      routes: ['/', '/submit'],
     },
   },
 

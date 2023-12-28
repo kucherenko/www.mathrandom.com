@@ -2,7 +2,12 @@
 title:  DX developer experience
 eventDate: 09-28-2023 18:00 GMT+2
 link: https://www.youtube.com/watch?v=Omu21o0d1Eo
-card: /cards/nikita.png
+card: https://ik.imagekit.io/tdf7wfnyrgb/math-random-cards/nikita_D-A4H8ZKC.png?updatedAt=1703766265249
+tags:
+  - dx
+  - developer experience
+  - engineering
+  - devops
 authors:
   - name: Nikita Galkin
     title: Software Engineer, System Architect, Node.js Tech Speaker

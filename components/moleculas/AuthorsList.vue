@@ -35,8 +35,6 @@
         <dt class="sr-only">About</dt>
         <dd v-html="author.about"></dd>
       </dl>
-
-
     </li>
   </ul>
 </template>

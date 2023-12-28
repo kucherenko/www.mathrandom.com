@@ -3,7 +3,15 @@ title: Returning to procedural programming after 20 years of OOP and FP
 eventDate: 10-19-2023 17:00 GMT+2
 language: Russian
 link: https://www.youtube.com/watch?v=YPa4aCQat1A
-card: /cards/timur.png
+card: https://ik.imagekit.io/tdf7wfnyrgb/math-random-cards/timur_wjZJoekv8e.png?updatedAt=1703766265098&tr=w-1024
+tags:
+    - procedural programming
+    - functional programming
+    - object-oriented programming
+    - javascript
+    - nodejs
+    - metaprogramming
+    - timur
 description: |
   Once I started with procedural programming, even non-structural, but later for more than 20 years I wrote in different paradigms like object-oriented, functional, reactive, parallel and asynchronous. I really like metaprogramming and for the last 7 years I have been writing multi-paradigm code in my everyday practice.  Now I need to reduce entry level and requirements for new specialists entering the platform I am working on. As well as I have one more challenge to increase the reliability and quality of the code in such a way that cannot be destroyed by any development process and any teams. Thus, I remembered object-based programming mixing it with procedural one and limited by immutability requirements. It gave us such an outstanding developer experience that I am happy to share some insights and cases with all of you.
 authors:

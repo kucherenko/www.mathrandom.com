@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const isMobile = ref(false);
+const toggleMobile = () => isMobile.value = !isMobile.value;
+</script>
+
 
 <template>
   <header class="flex items-center justify-between py-10">
@@ -21,11 +26,14 @@
         </svg>
       </div>
     </a></div>
-    <div class="flex items-center space-x-4 leading-5 sm:space-x-6"><a
-      class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/blog">Blog</a><a
-      class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/tags">Tags</a><a
-      class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/projects">Projects</a><a
-      class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/about">About</a>
+    <div class="flex items-center space-x-4 leading-5 sm:space-x-6">
+      <a
+        class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/events">Events</a>
+      <a
+        class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/tags">Tags</a>
+      <a
+        class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/about">About</a>
+
       <button aria-label="Search">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
              class="h-6 w-6 text-gray-900 dark:text-gray-100">
@@ -33,8 +41,10 @@
                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
         </svg>
       </button>
+
       <DarkToggle />
-      <button aria-label="Toggle Menu" class="sm:hidden">
+
+      <button aria-label="Toggle Menu" class="sm:hidden" @click="toggleMobile">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
              class="h-8 w-8 text-gray-900 dark:text-gray-100">
           <path fill-rule="evenodd"
@@ -43,9 +53,10 @@
         </svg>
       </button>
       <div
-        class="fixed left-0 top-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out dark:bg-gray-950 dark:opacity-[0.98] translate-x-full">
+        class="fixed left-0 top-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out dark:bg-gray-950 dark:opacity-[0.98]"
+        :class="isMobile ? 'translate-x-0' : 'translate-x-full'">
         <div class="flex justify-end">
-          <button class="mr-8 mt-11 h-8 w-8" aria-label="Toggle Menu">
+          <button class="mr-8 mt-11 h-8 w-8" aria-label="Toggle Menu" @click="toggleMobile">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                  class="text-gray-900 dark:text-gray-100">
               <path fill-rule="evenodd"
@@ -56,13 +67,11 @@
         </div>
         <nav class="fixed mt-8 h-full">
           <div class="px-12 py-4"><a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
-                                     href="/public">Home</a></div>
+                                     href="/">Home</a></div>
           <div class="px-12 py-4"><a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
-                                     href="/blog">Blog</a></div>
+                                     href="/events">Events</a></div>
           <div class="px-12 py-4"><a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                                      href="/tags">Tags</a></div>
-          <div class="px-12 py-4"><a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
-                                     href="/projects">Projects</a></div>
           <div class="px-12 py-4"><a class="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
                                      href="/about">About</a></div>
         </nav>

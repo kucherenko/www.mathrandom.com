@@ -2,8 +2,13 @@
 title: Bun 1.0 released
 eventDate: 09-13-2023 18:00 GMT+2
 link: https://www.youtube.com/watch?v=ukRBBUFdVPI
-card: /cards/bun.png
+card: https://ik.imagekit.io/tdf7wfnyrgb/math-random-cards/bun_Cx_tNQg8My.png?updatedAt=1703766265442&tr=w-1024
 language: English
+tags: 
+  - bun
+  - release
+  - backend
+  - javascript
 authors:
   - name: Andrii Rudavko
     title: Solution Architect II

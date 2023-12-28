@@ -3,7 +3,12 @@ title: Разрушаем мифы про Node.js
 eventDate: 02-21-2022 18:00 GMT+2
 language: Russian
 link: https://www.youtube.com/watch?v=Nykxhmh3WDY
-card: /cards/myth-nodejs.png
+card: https://ik.imagekit.io/tdf7wfnyrgb/math-random-cards/myth-nodejs_kdcrKfqqn.png?updatedAt=1703766265157&tr=w-1024
+tags: 
+  - nodejs
+  - backend
+  - architecture
+  - timur
 description: |
   Node.js - javascript на сервере существует уже давно, но все еще есть множество предубеждений и мифов, связанных с node.js. 
   В этом стриме поговорим с Тимуром Шемсединовым о node.js и мифах. 

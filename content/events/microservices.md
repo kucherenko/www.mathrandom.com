@@ -2,7 +2,12 @@
 title: Maybe you don’t need Microservices
 eventDate: 10-10-2023 18:00 GMT+3
 language: Ukrainian
-card: /cards/microservices.png
+card: https://ik.imagekit.io/tdf7wfnyrgb/math-random-cards/microservices_cCEjxK6xb.png?updatedAt=1703766265487&tr=w-1024
+tags: 
+  - microservices
+  - backend
+  - architecture
+  - javascript
 link: https://www.youtube.com/watch?v=7oK2dSC-ftM
 authors:
   - name: Borys Mohyla

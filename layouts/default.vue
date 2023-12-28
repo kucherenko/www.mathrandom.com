@@ -9,5 +9,6 @@
       </main>
       <Footer />
     </div>
+    <LazyUDocsSearch />
   </section>
 </template>
