@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import Tags from "~/components/moleculas/Tags.vue";
 import AuthorsList from "~/components/moleculas/AuthorsList.vue";
+import type { CommunityEvent } from "~/types/community-event";
 
 const { params } = useRoute<any>();
-const { data: event } = await useAsyncData('hello', () => queryContent('events', params.slug).findOne())
+const { data } = await useAsyncData('event', () => queryContent<CommunityEvent>('events', params.slug).findOne())
+const event = data.value
+if (!event) {
+  throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
+}
 </script>
 
 <template>

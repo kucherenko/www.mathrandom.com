@@ -16,7 +16,22 @@ const { event } = defineProps<{
         <dt class="sr-only">Event date</dt>
         <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
           <time datetime="2023-08-05T00:00:00.000Z">{{ event.eventDate }}</time>
+        </dd>
+        <dt class="sr-only">Tags</dt>
+        <dd>
           <Tags :tags="event.tags || []" />
+        </dd>
+        <dd v-if="event.card">
+          <div class="pr-5">
+            <a :href="event._path" class="w-full xl:w-auto">
+              <img alt="card" loading="lazy"
+                   decoding="async"
+                   data-nimg="1"
+                   class="rounded object-cover"
+                   :src="event.card"
+              />
+            </a>
+          </div>
         </dd>
       </dl>
       <div class="space-y-5 xl:col-span-3">
