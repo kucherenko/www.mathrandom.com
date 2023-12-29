@@ -12,7 +12,7 @@ const { data: events } = await useAsyncData('events', () => queryContent('events
       return { ...c, date: Date.parse(c.eventDate) }
     }).sort((first, second) => {
       return first.date < second.date ? 1 : -1
-    })
+    }).slice(0, 3)
   },
 })
 
@@ -21,7 +21,7 @@ const { data: events } = await useAsyncData('events', () => queryContent('events
 <template>
   <div>
     <Hero />
-    <EventsList :events="events || []"/>
+    <EventsList title="Events" all-events-link :events="events || []"/>
     <Subscribe />
   </div>
 </template>

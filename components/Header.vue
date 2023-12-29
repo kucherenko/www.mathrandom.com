@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const isMobile = ref(false);
 const toggleMobile = () => isMobile.value = !isMobile.value;
+
 </script>
 
 
@@ -34,7 +35,7 @@ const toggleMobile = () => isMobile.value = !isMobile.value;
       <a
         class="hidden font-medium text-gray-900 dark:text-gray-100 sm:block" href="/about">About</a>
 
-      <button aria-label="Search">
+      <button aria-label="Search" @click="">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
              class="h-6 w-6 text-gray-900 dark:text-gray-100">
           <path stroke-linecap="round" stroke-linejoin="round"

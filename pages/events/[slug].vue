@@ -4,11 +4,20 @@ import AuthorsList from "~/components/moleculas/AuthorsList.vue";
 import type { CommunityEvent } from "~/types/community-event";
 
 const { params } = useRoute<any>();
-const { data } = await useAsyncData('event', () => queryContent<CommunityEvent>('events', params.slug).findOne())
-const event = data.value
+const { data } = await useAsyncData("event", () => queryContent<CommunityEvent>("events", params.slug).findOne());
+const event = data.value;
 if (!event) {
-  throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
+  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
 }
+const title = event.title + ' - Math.random() JavaScript Community';
+useSeoMeta({
+  title,
+  ogTitle: title,
+  description: event.description,
+  ogDescription: event.description,
+  ogImage: event.card,
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>
@@ -37,7 +46,7 @@ if (!event) {
             </dl>
             <div>
               <h1
-              class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+                class="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
                 {{ event.title }}
               </h1>
             </div>
@@ -48,23 +57,23 @@ if (!event) {
           <dl class="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
             <dt class="sr-only">Authors</dt>
             <dd>
-              <AuthorsList :authors="event.authors || []"/>
+              <AuthorsList :authors="event.authors || []" />
             </dd>
           </dl>
           <div class="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
             <div class="prose max-w-none p-10 dark:prose-invert">
               <div>
-                <YouTube :src="event.link"/>
+                <YouTube :src="event.link" />
               </div>
-              <ContentRenderer :value="event"/>
+              <ContentRenderer :value="event" />
             </div>
           </div>
           <footer>
-            <div
+            <div v-if="event.tags && event.tags.length > 0"
               class="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
               <div class="py-4 xl:py-8"><h2 class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
                 Tags</h2>
-                <Tags :tags="event.tags || []"/>
+                <Tags :tags="event.tags || []" />
               </div>
             </div>
             <div class="pt-4 xl:pt-8"><a class="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"

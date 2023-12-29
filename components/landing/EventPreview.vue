@@ -17,10 +17,6 @@ const { event } = defineProps<{
         <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
           <time datetime="2023-08-05T00:00:00.000Z">{{ event.eventDate }}</time>
         </dd>
-        <dt class="sr-only">Tags</dt>
-        <dd>
-          <Tags :tags="event.tags || []" />
-        </dd>
         <dd v-if="event.card">
           <div class="pr-5">
             <a :href="event._path" class="w-full xl:w-auto">
@@ -43,7 +39,7 @@ const { event } = defineProps<{
                 {{ event.title }}
               </a>
             </h2>
-
+            <Tags :tags="event.tags || []" />
           </div>
           <div class="prose max-w-none text-gray-500 dark:text-gray-400">
             {{ event.description }}
