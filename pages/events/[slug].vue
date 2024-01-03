@@ -2,6 +2,7 @@
 import Tags from "~/components/moleculas/Tags.vue";
 import AuthorsList from "~/components/moleculas/AuthorsList.vue";
 import type { CommunityEvent } from "~/types/community-event";
+import { useHead } from "#imports";
 
 const { params } = useRoute<any>();
 const { data } = await useAsyncData("event", () => queryContent<CommunityEvent>("events", params.slug).findOne());
@@ -17,6 +18,21 @@ useSeoMeta({
   ogDescription: event.description,
   ogImage: event.card,
   twitterCard: 'summary_large_image',
+  twitterImage: event.card,
+  twitterTitle: title,
+  ogUrl: `https://mathrandomjs.com/events${event._path}`,
+})
+useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.ico'
+    }
+  ]
 })
 </script>
 

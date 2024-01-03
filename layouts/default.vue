@@ -7,6 +7,5 @@
       </main>
       <Footer />
     </div>
-    <DocsSearch />
   </section>
 </template>

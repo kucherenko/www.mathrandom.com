@@ -4,13 +4,12 @@ import { appDescription } from './constants/'
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/ui',
     '@nuxt/content',
-    '@nuxt/test-utils/module'
+    '@nuxt/test-utils/module',
   ],
 
   experimental: {
@@ -24,7 +23,6 @@ export default defineNuxtConfig({
   },
 
   css: [
-    '@unocss/reset/tailwind.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
@@ -85,6 +83,10 @@ export default defineNuxtConfig({
 
   devtools: {
     enabled: true,
+
+    timeline: {
+      enabled: true
+    }
   },
   content: {
     // ... options

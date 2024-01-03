@@ -3,7 +3,7 @@
 import type { CommunityEvent } from "~/types/community-event";
 import EventsList from "~/components/landing/EventsList.vue";
 import Hero from "~/components/landing/Hero.vue";
-import Subscribe from "~/components/Subscribe.vue";
+import Subscribe from "~/components/moleculas/Subscribe.vue";
 
 
 const { data: events } = await useAsyncData('events', () => queryContent('events').find(), {
@@ -21,7 +21,7 @@ const { data: events } = await useAsyncData('events', () => queryContent('events
 <template>
   <div>
     <Hero />
-    <EventsList title="Events" all-events-link :events="events || []"/>
+    <EventsList all-events-link :events="events || []"/>
     <Subscribe />
   </div>
 </template>

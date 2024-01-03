@@ -2,7 +2,7 @@
 
 import type { CommunityEvent } from "~/types/community-event";
 import EventsList from "~/components/landing/EventsList.vue";
-import Subscribe from "~/components/Subscribe.vue";
+import Subscribe from "~/components/moleculas/Subscribe.vue";
 
 
 const { data: events } = await useAsyncData('events', () => queryContent('events').find(), {
@@ -19,7 +19,7 @@ const { data: events } = await useAsyncData('events', () => queryContent('events
 
 <template>
   <div>
-    <EventsList title="Events" description="List of past and upcoming events in Math.random() JavaScript Community" :events="events || []"/>
+    <EventsList :events="events || []"/>
     <Subscribe />
   </div>
 </template>

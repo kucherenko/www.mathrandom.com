@@ -13,7 +13,7 @@ const {authors} = defineProps<{
         :alt="author.name"
         :title="author.name"
         :src="author.image"
-        class="w-18 h-18 rounded-full border-amber-400 border-4" />
+        class="w-20 h-20 rounded-full border-amber-400 border-4" />
     </span>
   </div>
 </template>

@@ -54,14 +54,14 @@ function getIcon(url: string)  {
 </script>
 
 <template>
-  <a
-    :href="href"
+  <UButton
+    variant="link"
+    :to="href"
     rel="noopener noreferrer"
     target="_blank"
-    class="hover:text-blue-500 m-1"
   >
     <font-awesome-icon
       :icon="getIcon(href)"
     ></font-awesome-icon>
-  </a>
+  </UButton>
 </template>

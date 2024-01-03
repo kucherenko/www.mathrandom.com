@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { appName } from '~/constants'
+import { appDescription, appName } from "~/constants";
 
 useHead({
   title: appName,
@@ -7,12 +7,12 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: 'Let\'s talk about JavaScript, TypeScript, Node.js, Deno, Bun and all things related to the web platform.'
+      content: appDescription
     },
     {
       hid: 'og:description',
       name: 'og:description',
-      content: 'Let\'s talk about JavaScript, TypeScript, Node.js, Deno, Bun and all things related to the web platform.'
+      content: appDescription
     },
     {
       hid: 'og:image',
@@ -22,7 +22,7 @@ useHead({
     {
       hid: 'twitter:description',
       name: 'twitter:description',
-      content: 'Let\'s talk about JavaScript, TypeScript, Node.js, Deno, Bun and all things related to the web platform.'
+      content: appDescription
     }
   ]
 })
@@ -35,7 +35,7 @@ useHead({
   </NuxtLayout>
 </template>
 
-<style>
+<style lang="scss">
 html,
 body,
 #__nuxt {
