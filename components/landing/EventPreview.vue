@@ -15,7 +15,9 @@ const { event } = defineProps<{
       <dl>
         <dt class="sr-only">Event date</dt>
         <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-          <time datetime="2023-08-05T00:00:00.000Z">{{ event.eventDate }}</time>
+          <time :datetime="event.eventDate">
+            {{ (new Date(event.eventDate)).toDateString() }} {{ (new Date(event.eventDate)).toTimeString() }}
+          </time>
         </dd>
         <dd v-if="event.card">
           <div class="pr-5">

@@ -1,29 +1,36 @@
 <script setup lang="ts">
 import type { ParsedContent } from "@nuxt/content/dist/runtime/types";
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
-
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
-
+const q = ref([])
 const showModal = ref(false)
 
-const links = [{
-  label: 'Events',
-  icon: 'i-heroicons-square-3-stack-3d',
-  to: '/events'
-}, {
-  label: 'Tags',
-  icon: 'i-simple-icons-stackblitz',
-  to: '/tags'
-}, {
-  label: 'About',
-  icon: 'i-heroicons-academic-cap',
-  to: '/about'
-}, {
-  label: 'Submit your talk',
-  icon: 'i-heroicons-book-open',
-  to: '/submit'
-}]
+const { data: navigation } = await useAsyncData("navigation", () => fetchContentNavigation())
+const { data: files } = useLazyFetch<ParsedContent[]>("/api/search.json", { default: () => [], server: false })
+
+const groups = computed(() => {
+  const sources: any[] = []
+  let index = 0
+  for (const file of files.value) {
+    sources.push({
+      id: index,
+      label: file.title,
+      to: file._path,
+      icon: file.icon,
+    })
+    index++
+  }
+  console.log(navigation.value)
+  return [
+      { key: 'files', commands: sources },
+      // { key: 'navigation', commands: navigation.value },
+    ]
+})
+
+function onSelect (option: {to?: string, href?: string}) {
+  if (option.to) {
+    window.open(option.to, '_self')
+  }
+}
 </script>
 
 <template>
@@ -40,18 +47,13 @@ const links = [{
     </svg>
   </UButton>
   <UModal v-model="showModal">
-      <UCard>
-        <template #header>
-          <UInput :padded="false" placeholder="Search..." variant="none" class="w-full" />
-        </template>
-
-        <ul>
-          <li>1. TODO: Implement search</li>
-          <li>2. Add services</li>
-          <li>3. ololo</li>
-        </ul>
-
-      </UCard>
+      <UCommandPalette
+        v-model="q"
+        :autoselect="false"
+        :groups="groups"
+        :fuse="{ resultLimit: 10, fuseOptions: { threshold: 0.1 } }"
+        @update:model-value="onSelect"
+      />
     </UModal>
   </span>
 </template>

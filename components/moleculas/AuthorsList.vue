@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { Author } from "~/types/author";
-  import Link from "~/components/moleculas/Link.vue";
+  import UserLinks from "~/components/moleculas/UserLinks.vue";
 
   const { authors } = defineProps<{
     authors: Author[]
@@ -21,8 +21,8 @@
             <dt class="sr-only">Name</dt>
             <dd class="text-xl font-extrabold">{{ author.name }}</dd>
             <dt v-if="author.links && author.links.length" class="sr-only">Links</dt>
-            <dd>
-              <Link v-for="(link, i) in author.links" :href="link"/>
+            <dd v-if="author.links && author.links.length">
+              <UserLinks size="xs" :links="author.links"/>
             </dd>
           </dl>
         </dd>

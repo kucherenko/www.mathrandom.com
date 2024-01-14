@@ -7,13 +7,14 @@ const {authors} = defineProps<{
 </script>
 
 <template>
-  <div class="p-3 flex">
-    <span v-for="(author, index) in authors" :key="index" class="-m-3">
-      <img
+  <UAvatarGroup size="3xl" :max="5">
+      <UAvatar
+        v-for="(author, index) in authors"
+        :key="index"
         :alt="author.name"
-        :title="author.name"
+        size="3xl"
+        :chip-text="author.name"
         :src="author.image"
-        class="w-20 h-20 rounded-full border-amber-400 border-4" />
-    </span>
-  </div>
+      />
+  </UAvatarGroup>
 </template>

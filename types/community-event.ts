@@ -11,4 +11,5 @@ export interface CommunityEvent {
   _path: string
   date: Date
   tags?: string[]
+  icon?: string
 }
